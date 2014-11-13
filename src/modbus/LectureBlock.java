@@ -35,6 +35,7 @@ public class LectureBlock extends Thread
 	private Map<String, String>			hmafficheModif	= new TreeMap<> ();
 	private MapTableModel				tm;
 	public JTable						jtable			= new JTable ();
+
 	//public int 							nbBlock = 0;
 
 	private LectureBlock (FenetrePrincipale aFp)
