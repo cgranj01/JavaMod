@@ -37,7 +37,7 @@ public abstract class BlockMot extends Thread implements Convertir
 	private String							format			= null;
 	private boolean							running			= true;
 	private boolean							recsurfichier	= false;
-	private TreeMap<String, String []>		hm;
+	private TreeMap<String, String []>		hmchg;
 	private TreeMap<String, String []>		hmdelai;
 	private TreeMap<String, String []>		hmaffiche 		= new TreeMap<> ();
 	private SimpleDateFormat				sdf				= new SimpleDateFormat ("dd/MM/yyyy HH:mm:ss.SSS");
@@ -100,7 +100,7 @@ public abstract class BlockMot extends Thread implements Convertir
 							+ "(id_var, tagname, text1, text2, text3, adresse, valeur, horodatage) values (?,?,?,?,?,?,?,?)";
 					this.pStatement = this.corec.getConnexionSqlServer ().prepareStatement (insert);
 				}
-				this.hm = new TreeMap<> ();
+				this.hmchg = new TreeMap<> ();
 				this.hmdelai = new TreeMap<> ();
 				this.hmaffiche = new TreeMap<> ();
 				this.creationHmEnregitrement ();	
@@ -140,7 +140,7 @@ public abstract class BlockMot extends Thread implements Convertir
 				tabdescription [6] = res.getString ("delai_enregistrement");
 				tabdescription [7] = "0";
 				tabdescription [8] = res.getString ("coef").replaceAll (",",".");
-				this.hm.put (res.getString ("adresse"), tabdescription);
+				this.hmchg.put (res.getString ("adresse"), tabdescription);
 			}
 			else
 			{			
@@ -199,7 +199,7 @@ public abstract class BlockMot extends Thread implements Convertir
 				Long tempsCourant = System.nanoTime ();
 				String dateString = this.sdf.format (heureCourante);
 				System.out.println (toString () + " " + dateString);
-				for (Entry<String, String []> entree : this.hm.entrySet ())
+				for (Entry<String, String []> entree : this.hmchg.entrySet ())
 				{
 					String sValeur = this.toConvert (Integer.parseInt (entree.getKey ()), entree.getValue () [8]);
 					if ( ! entree.getValue () [5].equals (sValeur))
@@ -228,7 +228,7 @@ public abstract class BlockMot extends Thread implements Convertir
 					String sValeur = this.toConvert (Integer.parseInt (entreeaffiche.getKey ()), entreeaffiche.getValue ()[4]);
 					entreeaffiche.getValue () [5]= sValeur;
 				}
-				this.delai (50L, this.freq-79L);			
+				this.delai (100L, this.freq);			
 			}
 			
 			catch (ModbusIOException e)
@@ -418,12 +418,12 @@ public abstract class BlockMot extends Thread implements Convertir
 
 	public TreeMap<String, String []> getHm ()
 	{
-		return hm;
+		return hmchg;
 	}
 
 	public void setHm (TreeMap<String, String []> hm)
 	{
-		this.hm = hm;
+		this.hmchg = hm;
 	}
 
 	public TreeMap<String, String []> getHmdelai ()

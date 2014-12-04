@@ -319,7 +319,6 @@ public class LectureBlock extends Thread
 		{
 			this.hmafficheModif.put (entreeaffiche.getValue () [0], entreeaffiche.getValue () [5]);
 		}
-
 	}
 
 	public void demarrageLecture ()

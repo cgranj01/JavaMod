@@ -17,7 +17,8 @@ public class BlockBit extends BlockMot
 		int i = keyentree - this.getAdresseDebut ();
 		//byte [] b0 = this.getRes ().getRegister (i).to;
 		Long valeur = Long.parseLong (Integer.toBinaryString (this.getRes ().getRegisterValue (i)));
-		String sValeur = String.format ("%016d", valeur);
+		//String sValeur = String.format ("%016d", valeur);
+		String sValeur = String.format ("%1d", valeur);
 		return sValeur;
 	}
 
