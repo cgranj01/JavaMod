@@ -3,14 +3,11 @@ package principal;
 
 import gui.FenetrePrincipale;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-import connexionBase.Connexion;
-import connexionBase.ConnexionDBrec;
+import connexionBase.SingletonSessionHSQL;
+import connexionBase.SingletonSessionSQLServer;
 
 public class Principale
 {
@@ -19,26 +16,12 @@ public class Principale
 		try
 		{
 			UIManager.setLookAndFeel (UIManager.getSystemLookAndFeelClassName ());
-			Connexion.getInstance();		
-			ConnexionDBrec cdb = ConnexionDBrec.getInstance ();
-			String testtable = "select count(*) FROM INFORMATION_SCHEMA.TABLES where TABLE_NAME ='enr_variables'";
-			if (cdb.isConnecte ())
-			{
-				ResultSet res = cdb.getOrdreSql ().executeQuery (testtable);
-				while (res.next ())
-				{
-					if (res.getInt (1)==0)
-					{
-						String ctable = "CREATE TABLE enr_variables (id_var int, tagname nvarchar(50), text1 nvarchar(150), " +
-								"text2 nvarchar(150), text3 nvarchar(150), valeur nvarchar(50), adresse nvarchar(50), horodatage datetime)";
-						cdb.getOrdreSql ().execute (ctable);
-					}					
-				}		
-			}		
+			SingletonSessionHSQL.getInstance ();
+			SingletonSessionSQLServer.getInstance ();
 			new FenetrePrincipale ();
 		}
 	
-		catch (IllegalAccessException | ClassNotFoundException | InstantiationException | UnsupportedLookAndFeelException | SQLException e)
+		catch (IllegalAccessException | ClassNotFoundException | InstantiationException | UnsupportedLookAndFeelException e)
 		{
 			// handle exception
 		}

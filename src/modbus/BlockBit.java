@@ -1,22 +1,20 @@
 
 package modbus;
 
+import net.wimpi.modbus.msg.ReadMultipleRegistersResponse;
 
 
-public class BlockBit extends BlockMot
+
+public class BlockBit extends Blocks
 {
-	public BlockBit (int start, int longueur, int frequence, String aFormat, String aIdSlave, ConnexionModbusTCP aCm) throws Exception
-	{
-		super (start, longueur, frequence, aFormat, aIdSlave, aCm);
-		this.initialize ();
-	}
+
 
 	@Override
-	public String toConvert (int keyentree, String aCoef)
+	public String toConvert (int keyentree, Float aCoef, ReadMultipleRegistersResponse res)
 	{		
-		int i = keyentree - this.getAdresseDebut ();
+		int i = keyentree - this.getStartadress ();
 		//byte [] b0 = this.getRes ().getRegister (i).to;
-		Long valeur = Long.parseLong (Integer.toBinaryString (this.getRes ().getRegisterValue (i)));
+		Long valeur = Long.parseLong (Integer.toBinaryString (res.getRegisterValue (i)));
 		//String sValeur = String.format ("%016d", valeur);
 		String sValeur = String.format ("%1d", valeur);
 		return sValeur;

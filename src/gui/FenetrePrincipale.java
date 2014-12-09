@@ -19,8 +19,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -29,20 +27,28 @@ import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 
-import modbus.LectureBlock;
-import connexionBase.ConnexionDBrec;
+import modbus.Lecture;
+import persistence.Variables;
+import principal.Enregistrement;
+import connexionBase.SingletonSessionHSQL;
 
 @SuppressWarnings("serial")
-public class FenetrePrincipale extends JFrame implements WindowListener, PropertyChangeListener, WindowStateListener, ActionListener
+public class FenetrePrincipale extends JFrame
+		implements
+			WindowListener,
+			PropertyChangeListener,
+			WindowStateListener,
+			ActionListener
 {
-	private BarreDeMenu	barreDeMenu;
-	private LectureBlock lectureblock;
-	private Traitements	traitements		= Traitements.getInstance ();
-	private JLabel		infoCourante	= new JLabel ("E");
-	private TrayIcon	trayIcon;
-	private Image image;
-	private SystemTray	tray;
-	private JScrollPane defileur = new JScrollPane ();
+	private BarreDeMenu		barreDeMenu;
+	private Lecture			lecture;
+	private Enregistrement	enregistrement;
+	private Traitements		traitements		= Traitements.getInstance ();
+	private JLabel			infoCourante	= new JLabel (" ");
+	private TrayIcon		trayIcon;
+	private Image			image;
+	private SystemTray		tray;
+	private JScrollPane		defileur		= new JScrollPane ();
 
 	public FenetrePrincipale ()
 	{
@@ -52,7 +58,7 @@ public class FenetrePrincipale extends JFrame implements WindowListener, Propert
 		this.traitements.ajouteEcouteur (this);
 		this.infoCourante.setHorizontalAlignment (SwingConstants.LEFT);
 		this.recupereErrorsSql ();
-		this.lireBlock ();
+		this.lire ();
 
 		this.setDefaultCloseOperation (JFrame.DO_NOTHING_ON_CLOSE);
 		this.addWindowListener (this);
@@ -64,93 +70,81 @@ public class FenetrePrincipale extends JFrame implements WindowListener, Propert
 		this.setLocationRelativeTo (null);
 		this.setVisible (true);
 	}
-	
+
 	private void constructionTrayIcon ()
 	{
-		PopupMenu popup			= new PopupMenu ();
-		MenuItem MIrouvrir		= new MenuItem ("Ouvrir");
+		PopupMenu popup = new PopupMenu ();
+		MenuItem MIrouvrir = new MenuItem ("Ouvrir");
 		popup.add (MIrouvrir);
 		MIrouvrir.addActionListener (this);
 		MIrouvrir.setActionCommand ("rouvrir");
 		if (SystemTray.isSupported ())
 		{
 			this.tray = SystemTray.getSystemTray ();
-			this.trayIcon=new TrayIcon(this.image , "JMaitre", popup);			
-            this.trayIcon.setImageAutoSize(true);           
+			this.trayIcon = new TrayIcon (this.image, "JMaitre", popup);
+			this.trayIcon.setImageAutoSize (true);
 		}
-		
 	}
 
 	private void initialisationInterface ()
 	{
 		this.image = new ImageIcon (FenetrePrincipale.class.getResource ("/images/enbase32.png")).getImage ();
-		this.setIconImage(image);
+		this.setIconImage (image);
 		this.barreDeMenu = new BarreDeMenu (this);
 		this.setJMenuBar (this.barreDeMenu);
 		this.constructionTrayIcon ();
 		this.add (this.barreDeMenu.getBarreOutils (), BorderLayout.PAGE_START);
-		this.add (this.infoCourante, BorderLayout.SOUTH);	
+		this.add (this.infoCourante, BorderLayout.SOUTH);
 		this.add (this.defileur);
 		this.setResizable (false);
-		//this.setSize (160, 50);
+		// this.setSize (160, 50);
 	}
-	
-	public void lireBlock()
+
+	public void lire ()
 	{
-		this.lectureblock = LectureBlock.getInstance (this);
-		this.lectureblock.start ();
+		this.lecture = Lecture.getInstance (this);
+		this.lecture.start ();
+		this.enregistrement = new Enregistrement ();
+		this.enregistrement.start ();
+
 	}
-	
-	public void recupereErrorsSql()
+
+	public void recupereErrorsSql ()
 	{
-		File file = new File("bufferErrors.sql");
-		if (file.exists())
+		File file = new File ("bufferErrors.sql");
+		if (file.exists ())
 		{
-			String insertSQL = "insert into enr_variables " +
-					"(id_var, tagname, text1, text2, text3, adresse, valeur, horodatage)" +
-					" values (?,?,?,?,?,?,?,?)";
+			String insertSQL = "insert into enr_variables "
+					+ "(id_var, tagname, text1, text2, text3, adresse, valeur, horodatage)"
+					+ " values (?,?,?,?,?,?,?,?)";
 			BufferedReader br;
 			String currentline;
 			String csvSplitBy = ";";
-			ConnexionDBrec cdbrec = ConnexionDBrec.getInstance ();
-			if (cdbrec.isConnecte ())
+			SingletonSessionHSQL cdbrec = SingletonSessionHSQL.getInstance ();
+			if (cdbrec.isConnected ())
 			{
-				
+
 				try
 				{
-					PreparedStatement ps = cdbrec.getConnexionSqlServer ().prepareStatement (insertSQL);
-					br = new BufferedReader (new FileReader(file));	
-					while((currentline = br.readLine()) != null)
+					//PreparedStatement ps = cdbrec.getConnexionSqlServer ().prepareStatement (insertSQL);
+					br = new BufferedReader (new FileReader (file));
+					while ( (currentline = br.readLine ()) != null)
 					{
+						Variables var = new Variables ();
 						String [] variable = currentline.split (csvSplitBy);
-						ps.setString (1, variable [0]);
-						ps.setString (2, variable [1]);
-						ps.setString (3, variable [2]);
-						ps.setString (4, variable [3]);
-						ps.setString (5, variable [4]);
-						ps.setString (6, variable [5]);
-						ps.setString (7, variable [6]);
-						ps.setString (8, variable [7]);
-						ps.addBatch ();
-						ps.executeBatch ();
-					}			
-					br.close();
+						var.setIdtag (Long.parseLong (variable [0]));
+						var.setType (variable [1]);
+						
+					}
+					br.close ();
 					file.delete ();
 				}
 				catch (IOException e1)
 				{
 					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				catch (SQLException e)
-				{
-					System.out.println ("test");
-					e.printStackTrace();
+					e1.printStackTrace ();
 				}
 			}
-			
-			
-	        
 		}
 	}
 
@@ -197,16 +191,16 @@ public class FenetrePrincipale extends JFrame implements WindowListener, Propert
 	@Override
 	public void windowIconified (WindowEvent e)
 	{
-			try
-			{
-				this.tray.add(trayIcon);
-			}
-			catch (AWTException e1)
-			{
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-            this.setVisible(false);	
+		try
+		{
+			this.tray.add (trayIcon);
+		}
+		catch (AWTException e1)
+		{
+			// TODO Auto-generated catch block
+			e1.printStackTrace ();
+		}
+		this.setVisible (false);
 	}
 
 	@Override
@@ -247,18 +241,17 @@ public class FenetrePrincipale extends JFrame implements WindowListener, Propert
 
 		if (cause.equals ("lecture"))
 		{
-			this.lireBlock ();
+			this.lire ();
 			return;
 		}
 
 		if (cause.equals ("pause"))
 		{
-			if (LectureBlock.getInstance () != null)
-				{
-					
-					LectureBlock.getInstance ().arretLecture ();
-					LectureBlock.setInstanceNull ();
-				}
+			if (Lecture.getInstance () != null)
+			{
+				Lecture.getInstance ().arretLecture ();
+				Lecture.setInstanceNull ();
+			}
 			return;
 		}
 
@@ -282,7 +275,7 @@ public class FenetrePrincipale extends JFrame implements WindowListener, Propert
 	@Override
 	public void windowStateChanged (WindowEvent e)
 	{
-		
+
 	}
 
 	@Override
@@ -291,9 +284,9 @@ public class FenetrePrincipale extends JFrame implements WindowListener, Propert
 		String cause = aAction.getActionCommand ();
 		if ("rouvrir".equals (cause))
 		{
-			this.tray.remove(this.trayIcon);
+			this.tray.remove (this.trayIcon);
 			this.setExtendedState (JFrame.NORMAL);
-            this.setVisible(true);
+			this.setVisible (true);
 		}
 	}
 
@@ -315,5 +308,15 @@ public class FenetrePrincipale extends JFrame implements WindowListener, Propert
 	public void setDefileur (JScrollPane defileur)
 	{
 		this.defileur = defileur;
+	}
+
+	public Enregistrement getEnregistrement ()
+	{
+		return enregistrement;
+	}
+
+	public void setEnregistrement (Enregistrement enregistrement)
+	{
+		this.enregistrement = enregistrement;
 	}
 }

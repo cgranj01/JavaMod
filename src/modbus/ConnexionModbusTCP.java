@@ -10,8 +10,7 @@ public class ConnexionModbusTCP
 	private TCPMasterConnection				TCPMasterCon;
 	
 	public ConnexionModbusTCP(String aIp_slave, int aPort, int aTimeOut)
-	{
-		
+	{	
 		InetAddress iad;
 		try
 		{
@@ -24,9 +23,7 @@ public class ConnexionModbusTCP
 		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		
-	
+		}	
 	}
 
 	public TCPMasterConnection getTCPMasterCon ()
