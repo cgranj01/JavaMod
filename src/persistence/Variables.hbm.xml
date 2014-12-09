@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 6 d?c. 2014 00:10:21 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class name="persistence.Variables" table="VARIABLES">
+  <id name="idtag" type="long">
+   <column name="IDTAG" not-null="true" unique="true"/>
+   <generator class="native"/>
+  </id>
+  <property generated="never" lazy="false" name="format" type="java.lang.String">
+   <column name="FORMAT"/>
+  </property>
+  <property generated="never" lazy="false" name="type" type="java.lang.String">
+   <column name="TYPE"/>
+  </property>
+  <property generated="never" lazy="false" name="adresse" type="int">
+   <column name="ADRESSE"/>
+  </property>
+  <property generated="never" lazy="false" name="periode" type="java.lang.String">
+   <column name="PERIODE"/>
+  </property>
+  <property generated="never" lazy="false" name="recdelay" type="int">
+   <column name="RECDELAY"/>
+  </property>
+  <many-to-one class="persistence.Esclaves" column="idslave"
+   name="Slave" not-null="true"/>
+  <property generated="never" lazy="false" name="tagname" type="java.lang.String">
+   <column name="TAGNAME"/>
+  </property>
+  <property generated="never" lazy="false" name="zone" type="java.lang.String">
+   <column name="ZONE"/>
+  </property>
+  <property generated="never" lazy="false" name="userfield1" type="java.lang.String">
+   <column name="USERFIELD1"/>
+  </property>
+  <property generated="never" lazy="false" name="userfield2" type="java.lang.String">
+   <column name="USERFIELD2"/>
+  </property>
+  <property generated="never" lazy="false" name="coefficient" type="float">
+   <column name="COEFFICIENT"/>
+  </property>
+  <property generated="never" lazy="false" name="affichage" type="java.lang.String">
+   <column name="AFFICHAGE"/>
+  </property>
+  <property generated="never" lazy="false" name="libelle0" type="java.lang.String">
+   <column name="LIBELLE0"/>
+  </property>
+  <property generated="never" lazy="false" name="libelle1" type="java.lang.String">
+   <column name="LIBELLE1"/>
+  </property>
+  <property generated="never" lazy="false" name="libelleEtendu" type="java.lang.String">
+   <column name="LIBELLEETENDU"/>
+  </property>
+  <property generated="never" lazy="false" name="astreinte" type="int">
+   <column name="ASTREINTE"/>
+  </property>
+    <property generated="never" lazy="false" name="valeur" type="float">
+   <column name="VALEUR"/>
+  </property>
+ </class>
+</hibernate-mapping>

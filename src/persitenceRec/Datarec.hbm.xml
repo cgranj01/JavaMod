@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 5 d?c. 2014 16:12:01 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class name="persitenceRec.Datarec" table="DATAREC">
+  <id name="rowid" type="long">
+   <column name="ROWID"/>
+   <generator class="increment"/>
+  </id>
+  <property generated="never" lazy="false" name="horodatage" type="java.util.Date">
+   <column name="HORODATAGE" />
+  </property>
+  <property generated="never" lazy="false" name="adresse" type="int">
+   <column name="ADRESSE"/>
+  </property>
+  <property generated="never" lazy="false" name="valeur" type="float">
+   <column name="VALEUR"/>
+  </property>
+  <property generated="never" lazy="false" name="idslave" type="int">
+   <column name="IDSLAVE"/>
+  </property>
+  <property generated="never" lazy="false" name="tagname" type="java.lang.String">
+   <column name="TAGNAME"/>
+  </property>
+  <property generated="never" lazy="false" name="zone" type="java.lang.String">
+   <column name="ZONE"/>
+  </property>
+  <property generated="never" lazy="false" name="userfield1" type="java.lang.String">
+   <column name="USERFIELD1"/>
+  </property>
+  <property generated="never" lazy="false" name="userfield2" type="java.lang.String">
+   <column name="USERFIELD2"/>
+  </property>
+ </class>
+</hibernate-mapping>
