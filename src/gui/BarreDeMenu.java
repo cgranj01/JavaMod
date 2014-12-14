@@ -28,6 +28,11 @@ public class BarreDeMenu extends JMenuBar implements PropertyChangeListener, Act
 	private AbstractAction		actionPause;
 	private AbstractAction		actionComModbus;
 
+	public BarreDeMenu ()
+	{
+		
+	}
+	
 	public BarreDeMenu (FenetrePrincipale aFp)
 	{
 		this.fenetrePrincipale = aFp;

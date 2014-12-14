@@ -23,49 +23,57 @@ import connexionBase.SingletonSessionHSQL;
 
 public abstract class Blocks extends Thread implements Convertir
 {
-	private long							idblock;
-	private String							format;
-	private String							fonction;
-	private int								startadress;
-	private int								longueur;
-	private int								frequence;
-	private List<Variables>					listvar = new ArrayList<Variables> ();;
-	private Esclaves						slave;
-	private ConnexionModbusTCP				connModbus;
+	private long					idblock;
+	private String					format;
+	private String					fonction;
+	private int						startadress;
+	private int						longueur;
+	private int						frequence;
+	private List<Variables>			listvar		= new ArrayList<Variables> ();					;
+	private Esclaves				slave;
+	private ConnexionModbusTCP		connModbus;
 
-	//private
-	private ModbusTCPTransaction			trans;
-	//private ReadMultipleRegistersRequest	req;
-	private String							messageInfo	= null;
-	private boolean							running		= true;
+	// private
+	private ModbusTCPTransaction	trans;
+	// private ReadMultipleRegistersRequest req;
+	private String					messageInfo	= null;
+	private boolean					running		= true;
 
-	private DateTimeFormatter				dtf			= DateTimeFormatter.ofPattern ("HH:mm:ss:SSS");
+	private DateTimeFormatter		dtf			= DateTimeFormatter.ofPattern ("HH:mm:ss:SSS");
 
-	private Long							freq;
-	private int								row			= 0;
-	
-	
+	private Long					freq;
+	private int						row			= 0;
 
 	public void preparationRequete ()
 	{
-		ReadMultipleRegistersRequest	req;
-		req = new ReadMultipleRegistersRequest ();
-		// this.cmod.getTCPMasterCon ().connect ();
+		ReadMultipleRegistersRequest req = new ReadMultipleRegistersRequest ();
+		ConnexionModbusTCP c = this.slave.connexionModbusTCP ();
+//		try
+//		{
+//			c.getTCPMasterCon ().connect ();
+//		}
+//		catch (Exception e)
+//		{
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		this.trans = new ModbusTCPTransaction ();
 		req.setReference (this.startadress);
 		req.setWordCount (this.longueur);
+		
 		this.trans.setRequest (req);
-		this.trans.setConnection (this.connModbus.getTCPMasterCon ());
+		this.trans.setConnection (c.getTCPMasterCon ());
 	}
 
 	public void initialize ()
 	{
-		Session sessionHSQL	= SingletonSessionHSQL.getInstance ().getSession ();
+		Session sessionHSQL = SingletonSessionHSQL.getInstance ().getSession ();
 		String query = "select count (*) from Variables v inner join v.Slave s on s.idslave = :idslave and "
 				+ "adresse between :adressdebut and :adressfin and format = :format";
 		this.row = ((Long) sessionHSQL.createQuery (query).setLong ("idslave", this.slave.getIdslave ())
-				.setInteger ("adressdebut", this.startadress).setInteger ("adressfin", (this.startadress + this.longueur - 2))
-				.setString ("format", this.format).uniqueResult ()).intValue ();
+				.setInteger ("adressdebut", this.startadress)
+				.setInteger ("adressfin", (this.startadress + this.longueur - 2)).setString ("format", this.format)
+				.uniqueResult ()).intValue ();
 		if (this.row != 0)
 		{
 			// this.treemap = new TreeMap<> ();
@@ -75,14 +83,15 @@ public abstract class Blocks extends Thread implements Convertir
 
 	public void remplirTm ()
 	{
-		Session sessionHSQL	= SingletonSessionHSQL.getInstance ().getSession ();
+		Session sessionHSQL = SingletonSessionHSQL.getInstance ().getSession ();
 		String query = "select v.tagname, v.format, v.type, v.adresse, v.recdelay, "
-				+ "v.userfield1, v.userfield2, v.zone, v.coefficient, v.affichage, v.periode, v.idtag, v.valeur from Variables as v join v.Slave s on s.idslave = :idslave and "
+				+ "v.userfield1, v.userfield2, v.zone, v.coefficient, v.affichage, v.periode, v.idtag, v.numbit, v.valeur, v.saisie from Variables as v join v.Slave s on s.idslave = :idslave and "
 				+ "adresse between :adressdebut and :adressfin and format = :format";
 
 		List<Object []> groupList = sessionHSQL.createQuery (query).setLong ("idslave", this.slave.getIdslave ())
-				.setInteger ("adressdebut", this.startadress).setInteger ("adressfin", (this.startadress + this.longueur -2))
-				.setString ("format", this.format).list ();
+				.setInteger ("adressdebut", this.startadress)
+				.setInteger ("adressfin", (this.startadress + this.longueur - 2)).setString ("format", this.format)
+				.list ();
 		for (Object [] t : groupList)
 		{
 			Variables var = new Variables ();
@@ -97,14 +106,15 @@ public abstract class Blocks extends Thread implements Convertir
 			var.setCoefficient ((float) t [8]);
 			var.setAffichage (t [9].toString ());
 			var.setPeriode (t [10].toString ());
-			var.setIdtag ((Long) t[11]);
+			var.setIdtag ((Long) t [11]);
 			var.setValeur (0f);
+			var.setSaisie (0f);
+			var.setNumbit ((int) t [12]);
 
 			this.listvar.add (var);
 
-
 		}
-		
+
 		this.preparationRequete ();
 
 	}
@@ -115,30 +125,40 @@ public abstract class Blocks extends Thread implements Convertir
 		{
 			try
 			{
+				for (Variables listv : this.listvar)
+				{
+					
+					if (listv.getSaisie () != 0)
+					{					
+						ModbusTCPTransaction tran = new ModbusTCPTransaction ();	
+						tran.setConnection (this.slave.connexionModbusTCP ().getTCPMasterCon ());
+						tran.setRequest (this.convertToRegister (listv.getAdresse (), listv.getSaisie () ,listv.getCoefficient ()));
+						tran.execute ();
+						listv.setSaisie (0f);
+					}
+				
+					
+				}
+
 				this.trans.execute ();
-				ReadMultipleRegistersResponse res = (ReadMultipleRegistersResponse) this.trans.getResponse ();
+				ReadMultipleRegistersResponse res = (ReadMultipleRegistersResponse) this.trans.getResponse ();								
 				LocalDateTime localedatetime = LocalDateTime.now ();
 				String dateString = localedatetime.format (this.dtf);
 				System.out.println (toString () + " " + dateString);
 
 				for (Variables listv : this.listvar)
 				{
-					String sValeur = this.toConvert (listv.getAdresse (), listv.getCoefficient (), res);
+					String sValeur = this.toConvert (listv.getAdresse (), listv.getNumbit (), listv.getCoefficient (), res);
 					listv.setValeur (Float.parseFloat (sValeur));
+					
 				}
-				// for (Entry<Integer, Variables> entree : this.treemap.entrySet
-				// ())
-				// {
-				// String sValeur = this.toConvert (entree.getKey (),
-				// entree.getValue ().getCoefficient ());
-				// entree.getValue ().setValeur (Float.parseFloat (sValeur));
-				// }
 
-				this.delai (50L, this.freq-50L);
+				this.delai (50L, this.freq - 80L);
 			}
 
 			catch (ModbusIOException e)
 			{
+				e.printStackTrace ();
 				this.running = false;
 				JOptionPane.showMessageDialog (null, e.getMessage (), "IO Erreur", JOptionPane.ERROR_MESSAGE);
 			}

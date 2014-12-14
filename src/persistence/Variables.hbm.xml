@@ -17,6 +17,9 @@
   <property generated="never" lazy="false" name="adresse" type="int">
    <column name="ADRESSE"/>
   </property>
+  <property generated="never" lazy="false" name="numbit" type="int">
+   <column name="NUMBIT"/>
+  </property>
   <property generated="never" lazy="false" name="periode" type="java.lang.String">
    <column name="PERIODE"/>
   </property>
@@ -57,6 +60,9 @@
   </property>
     <property generated="never" lazy="false" name="valeur" type="float">
    <column name="VALEUR"/>
+  </property>
+  <property generated="never" lazy="false" name="saisie" type="float">
+   <column name="SAISIE"/>
   </property>
  </class>
 </hibernate-mapping>

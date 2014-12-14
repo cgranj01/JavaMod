@@ -6,6 +6,7 @@ public class Variables
 	private String format;
 	private String type;
 	private int adresse;
+	private int numbit;
 	private String periode;
 	private int recdelay;
 	private Esclaves slave;
@@ -20,6 +21,7 @@ public class Variables
 	private String libelleEtendu;
 	private int astreinte;
 	private float valeur;
+	private float saisie;
 	
 	public Variables()
 	{
@@ -185,6 +187,26 @@ public class Variables
 	public void setValeur (float valeur)
 	{
 		this.valeur = valeur;
+	}
+
+	public float getSaisie ()
+	{
+		return saisie;
+	}
+
+	public void setSaisie (float saisie)
+	{
+		this.saisie = saisie;
+	}
+
+	public int getNumbit ()
+	{
+		return numbit;
+	}
+
+	public void setNumbit (int numbit)
+	{
+		this.numbit = numbit;
 	}
 	
 	

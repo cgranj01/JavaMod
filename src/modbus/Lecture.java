@@ -5,8 +5,6 @@ import gui.FenetrePrincipale;
 import gui.MapTableModel;
 
 import java.awt.Font;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.concurrent.CopyOnWriteArrayList;

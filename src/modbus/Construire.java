@@ -48,38 +48,22 @@ public class Construire
 					String [] variable = line.split (csvSplitBy);
 					var.setIdtag (Long.parseLong (variable [0]));
 					var.setFormat (variable [1]);
-					//System.out.println (variable [1]);
 					var.setType (variable [2]);
-					//System.out.println (variable [2]);
-					var.setAdresse (Integer.parseInt (variable [3]));
-					//System.out.println (variable [3]);
-					var.setPeriode (variable[4]);
-					System.out.println (variable [4]);
-					var.setRecdelay (Integer.parseInt (variable [5]));
-					//System.out.println (variable [5]);
-					var.setSlave ((Esclaves)this.sessionHQL.get (Esclaves.class, Long.parseLong (variable [6])));
-					//System.out.println (variable [6]);
-					var.setTagname (variable [7]);
-					//System.out.println (variable [7]);
-					
-					var.setZone (variable [8]);
-					//System.out.println (variable [8]);
-					var.setUserfield1 (variable [9]);
-					//System.out.println (variable [9]);
-					var.setUserfield2 (variable [10]);
-					//System.out.println (variable [10]);
-					var.setCoefficient (Float.parseFloat (variable [11]));
-					//System.out.println (variable [11]);
-					var.setAffichage (variable [12]);
-					//System.out.println (variable [12]);
-					var.setLibelle0 (variable [13]);
-					//System.out.println (variable [13]);
-					var.setLibelle1 (variable [14]);
-					//System.out.println (variable [14]);
-					var.setLibelleEtendu (variable [15]);
-					//System.out.println (variable [15]);
-					var.setAstreinte (Integer.parseInt (variable [16]));
-					//System.out.println (variable [16]);
+					var.setAdresse (Integer.parseInt (variable [3]));					
+					var.setNumbit  (Integer.parseInt (variable [4]));
+					var.setPeriode (variable[5]);
+					var.setRecdelay (Integer.parseInt (variable [6]));
+					var.setSlave ((Esclaves)this.sessionHQL.get (Esclaves.class, Long.parseLong (variable [7])));
+					var.setTagname (variable [8]);
+					var.setZone (variable [9]);
+					var.setUserfield1 (variable [10]);
+					var.setUserfield2 (variable [11]);
+					var.setCoefficient (Float.parseFloat (variable [12]));
+					var.setAffichage (variable [13]);
+					var.setLibelle0 (variable [14]);
+					var.setLibelle1 (variable [15]);
+					var.setLibelleEtendu (variable [16]);
+					var.setAstreinte (Integer.parseInt (variable [17]));
 					this.sessionHQL.merge (var);
 				}
 			}
@@ -187,11 +171,10 @@ public class Construire
 					bm.initialize ();
 					bm.start ();
 						
-					System.out.println ("idblock     " + bm.getIdblock ());
 					if (bm.getRow () != 0)
 					{
 						this.vecteur.add (bm);
-						System.out.println (this.vecteur);
+						//System.out.println (this.vecteur);
 					}
 					break;
 					
@@ -249,7 +232,7 @@ public class Construire
 	{
 		Esclaves esclaves = new Esclaves ();
 		esclaves.setIdslave (2L);
-		esclaves.setIpAdress ("192.168.10.10");
+		esclaves.setIpAdress ("LOCALHOST");
 		esclaves.setName ("SOFREL");
 		esclaves.setPort (502);
 		esclaves.setTimeout (2000);

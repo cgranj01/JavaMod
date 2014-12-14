@@ -1,92 +1,525 @@
-idtag;format;type;adresse;periode;delay;slave;tagname;zone;userfield1;userfield2;coef;affichage;libelle0;libelle1;libelleEtendu;astreinte
-1;BIT;;42001;P;60;2;Jérôme Borecki;TEST551;TEST551;TEST551;1;N;;;;0
-2;BIT;;42002;P;60;2;Didier Gambade;TEST552;TEST552;TEST552;1;N;;;;0
-3;BIT;;42003;P;60;2;H.L.Finance;TEST553;TEST553;TEST553;1;N;;;;0
-4;BIT;;42004;P;60;2;Marc Muin;TEST554;TEST554;TEST554;1;N;;;;0
-5;BIT;;42005;P;60;2;Yvan Markioli;TEST555;TEST555;TEST555;1;N;;;;0
-6;BIT;;42006;P;60;2;Philippe Boulicaut;TEST556;TEST556;TEST556;1;N;;;;0
-7;BIT;;42007;P;60;2;Jean-Marc Tillier;TEST557;TEST557;TEST557;1;N;;;;0
-8;BIT;;42008;P;60;2;Olivier Seurre;TEST558;TEST558;TEST558;1;N;;;;0
-9;BIT;;42009;P;60;2;Stagiaire 4;TEST559;TEST559;TEST559;1;N;;;;0
-10;BIT;;42010;P;60;2;Cyril Castro;TEST560;TEST560;TEST560;1;N;;;;0
-11;BIT;;42011;P;60;2;Marion Bondoux;TEST561;TEST561;TEST561;1;N;;;;0
-12;BIT;;42012;P;60;2;Stagiaire 1;TEST562;TEST562;TEST562;1;N;;;;0
-13;BIT;;42013;P;60;2;Romain Duchesnes;TEST563;TEST563;TEST563;1;N;;;;0
-14;BIT;;42014;P;60;2;Florent Marchand;TEST564;TEST564;TEST564;1;N;;;;0
-15;BIT;;42015;P;60;2;Nicolas Ducret;TEST565;TEST565;TEST565;1;N;;;;0
-16;BIT;;42016;P;60;2;Pascal Démas;TEST566;TEST566;TEST566;1;N;;;;0
-17;BIT;;42017;C;0;2;Stagiaire 3;TEST567;TEST567;TEST567;1;N;;;;0
-18;BIT;;42018;C;0;2;Sylvain Defail;TEST568;TEST568;TEST568;1;N;;;;0
-19;BIT;;42019;C;0;2;Sylvain Verne;TEST569;TEST569;TEST569;1;N;;;;0
-20;BIT;;42020;C;0;2;Alexandre Micard;TEST570;TEST570;TEST570;1;N;;;;0
-21;BIT;;42021;C;0;2;Bernard Lechere;TEST571;TEST571;TEST571;1;N;;;;0
-22;BIT;;42022;C;0;2;Remi Margeurite;TEST572;TEST572;TEST572;1;N;;;;0
-23;BIT;;42023;C;0;2;Christophe Prigent;TEST573;TEST573;TEST573;1;N;;;;0
-24;BIT;;42024;C;0;2;Raphaël Besson;TEST574;TEST574;TEST574;1;N;;;;0
-25;BIT;;42027;C;0;2;SAP2i 1;TEST575;TEST575;TEST575;1;N;;;;0
-26;BIT;;42028;C;0;2;William Deschaseaux;TEST576;TEST576;TEST576;1;N;;;;0
-27;BIT;;42029;C;0;2;Simon Payardelle;TEST577;TEST577;TEST577;1;N;;;;0
-28;BIT;;42030;C;0;2;Dominique Chevalier;TEST578;TEST578;TEST578;1;N;;;;0
-29;BIT;;42031;C;0;2;Christelle Duchesnes;TEST579;TEST579;TEST579;1;N;;;;0
-30;BIT;;42032;C;0;2;Nicolas Adam;TEST580;TEST580;TEST580;1;N;;;;0
-31;BIT;;42033;C;0;2;Florianne Abadi;TEST581;TEST581;TEST581;1;N;;;;0
-32;BIT;;42034;C;0;2;Stagiaire 2;TEST582;TEST582;TEST582;1;N;;;;0
-33;BIT;;42035;C;0;2;Invité 1;TEST583;TEST583;TEST583;1;N;;;;0
-34;BIT;;42036;C;0;2;Invité 2;TEST584;TEST584;TEST584;1;N;;;;0
-35;BIT;;42037;C;0;2;Iveco;TEST585;TEST585;TEST585;1;N;;;;0
-36;BIT;;42038;C;0;2;Benjamin Ducret;TEST586;TEST586;TEST586;1;N;;;;0
-37;BIT;;42039;C;0;2;Simon Zonca;TEST587;TEST587;TEST587;1;N;;;;0
-38;BIT;;42040;C;0;2;SAP2i 2;TEST588;TEST588;TEST588;1;N;;;;0
-39;BIT;;42041;C;0;2;SAP2i 3;TEST589;TEST589;TEST589;1;N;;;;0
-40;BIT;;42047;C;0;2;Porte garage;TEST590;TEST590;TEST590;1;N;;;;0
-41;BIT;;42048;C;0;2;Porte sas;TEST591;TEST591;TEST591;1;N;;;;0
-42;BIT;;42049;C;0;2;SAP2i;TEST592;TEST592;TEST592;1;N;;;;0
-43;BIT;;42050;C;0;2;Bp sas;TEST593;TEST593;TEST593;1;N;;;;0
-44;BIT;;42051;C;0;2;Position portail;TEST594;TEST594;TEST594;1;N;;;;0
-45;BIT;;42052;C;0;2;Inter crépusculaire;TEST595;TEST595;TEST595;1;N;;;;0
-46;BIT;;42053;C;0;2;Digicode : code 1;TEST596;TEST596;TEST596;1;N;;;;0
-47;BIT;;42054;C;0;2;Volumétrique entrée;TEST597;TEST597;TEST597;1;Y;;;;0
-48;BIT;;42055;C;0;2;Volumétrique B.E.;TEST598;TEST598;TEST598;1;Y;;;;0
-49;BIT;;42056;C;0;2;Volumétrique atelier;TEST599;TEST599;TEST599;1;Y;;;;0
-50;BIT;;42057;C;0;2;Digicode : code 2;TEST600;TEST600;TEST600;1;N;;;;0
-51;BIT;;42058;C;0;2;Contact porte sectionnelle;TEST601;TEST601;TEST601;1;N;;;;0
-52;BIT;;42059;C;0;2;Contact porte atelier;TEST602;TEST602;TEST602;1;N;;;;0
-53;BIT;;42060;C;0;2;Bp livraison atelier;TEST603;TEST603;TEST603;1;N;;;;0
-54;BIT;;42061;C;0;2;BP livraison SAS entrée;TEST604;TEST604;TEST604;1;N;;;;0
-55;BIT;;42062;C;0;2;Incendie;TEST605;TEST605;TEST605;1;N;;;;0
-56;BIT;;42063;C;0;2;Reserve;TEST606;TEST606;TEST606;1;N;;;;0
-57;BIT;;42064;C;0;2;Reserve;TEST607;TEST607;TEST607;1;N;;;;0
-58;BIT;;42065;C;0;2;Reserve;TEST608;TEST608;TEST608;1;N;;;;0
-59;BIT;;42066;C;0;2;Variable_Test;TEST609;TEST609;TEST609;1;N;;;;0
-60;BIT;;42068;C;0;2;Poubelle;TEST610;TEST610;TEST610;1;N;;;;0
-61;BIT;;42075;C;0;2;Porte stagiaires et invité;TEST611;TEST611;TEST611;1;Y;;;;0
-62;BIT;;42080;C;0;2;Porte SAS entrée;TEST612;TEST612;TEST612;1;Y;;;;0
-63;BIT;;42081;C;0;2;Porte garage;TEST613;TEST613;TEST613;1;Y;;;;0
-64;BIT;;42082;C;0;2;Volets et lumière atelier;TEST614;TEST614;TEST614;1;Y;;;;0
-65;BIT;;42083;C;0;2;Fermeture portail;TEST615;TEST615;TEST615;1;Y;;;;0
-66;BIT;;42084;C;0;2;Eclairage exterieure;TEST616;TEST616;TEST616;1;Y;;;;0
-67;BIT;;42085;C;0;2;Sonnette;TEST617;TEST617;TEST617;1;Y;;;;0
-68;BIT;;42086;C;0;2;Bit tempo sirène;TEST618;TEST618;TEST618;1;Y;;;;0
-69;BIT;;42087;C;0;2;Sirène;TEST619;TEST619;TEST619;1;Y;;;;0
-70;BIT;;42100;C;0;2;Ouverture porte;TEST620;TEST620;TEST620;1;Y;;;;0
-71;BIT;;42101;C;0;2;Fermeture volets lumiere;TEST621;TEST621;TEST621;1;Y;;;;0
-72;BIT;;42102;C;0;2;Eclairage;TEST622;TEST622;TEST622;1;Y;;;;0
-73;BIT;;42103;C;0;2;Ouverture_matin;TEST623;TEST623;TEST623;1;Y;;;;0
-74;BIT;;42104;C;0;2;Intrusion;TEST624;TEST624;TEST624;1;Y;;;;0
-75;BIT;;42150;C;0;2;Présence;TEST625;TEST625;TEST625;1;Y;;;;0
-76;BIT;;42151;C;0;2;Site surveillé;TEST626;TEST626;TEST626;1;Y;;;;0
-77;BIT;;42152;C;0;2;Demande code;TEST627;TEST627;TEST627;1;Y;;;;0
-78;BIT;;42153;C;0;2;Défaut intrusion;TEST628;TEST628;TEST628;1;Y;;;;0
-79;DWORD;;42200;P;3600;2;Mot de vie;TEST629;TEST629;TEST629;0.1;Y;;;;0
-80;BIT;;42300;C;0;2;Eclairage extérieur;TEST630;TEST630;TEST630;1;Y;;;;0
-81;BIT;;42301;C;0;2;Bp livraison entrée;TEST631;TEST631;TEST631;1;Y;;;;0
-82;BIT;;42302;C;0;2;Bp livraison atelier;TEST632;TEST632;TEST632;1;Y;;;;0
-83;BIT;;42303;C;0;2;Bp sas;TEST633;TEST633;TEST633;1;Y;;;;0
-84;BIT;;42304;C;0;2;Sonnette;TEST634;TEST634;TEST634;1;Y;;;;0
-85;BIT;;42305;C;0;2;Ouverture porte entrée;TEST635;TEST635;TEST635;1;Y;;;;0
-86;BIT;;42306;C;0;2;Ouverture porte atelier;TEST636;TEST636;TEST636;1;Y;;;;0
-87;BIT;;42400;C;0;2;Commande man volet;TEST637;TEST637;TEST637;1;Y;;;;0
-88;BIT;;42401;C;0;2;Commande man portail;TEST638;TEST638;TEST638;1;Y;;;;0
-89;BIT;;42404;C;0;2;Commande man éclairage ext;TEST639;TEST639;TEST639;1;Y;;;;0
-90;BIT;;42405;C;0;2;Commande man porte sas entrée;TEST640;TEST640;TEST640;1;Y;;;;0
-91;BIT;;42406;C;0;2;Commande man porte atelier;TEST641;TEST641;TEST641;1;Y;;;;0
+idtag;format;type;adresse;numbit;periode;delay;slave;tagname;zone;userfield1;userfield2;coef;affichage;libelle0;libelle1;libelleEtendu;astreinte
+1;BIT;READ;1;1;C;60;2;Jérôme Borecki;TSX;;;1;Y;;;;0
+2;BIT;READ;1;2;P;60;2;Didier Gambade;TSX;;;1;Y;;;;0
+3;BIT;READ;3;1;P;60;2;H.L.Finance;TSX;;;1;Y;;;;0
+4;BIT;READ;3;0;P;60;2;Marc Muin;TSX;;;1;Y;;;;0
+5;BIT;READ;1;0;P;60;2;Yvan Markioli;TSX;;;1;Y;;;;0
+6;REAL;READ;6;0;P;60;2;Philippe Boulicaut;TSX;;;1.5;N;;;;0
+8;WORD;READ;8;0;P;60;2;Olivier Seurre;TSX;;;1.7;N;;;;0
+9;WORD;READ;9;0;P;60;2;Stagiaire 4;TSX;;;1.8;N;;;;0
+10;WORD;READ;10;0;P;60;2;Cyril Castro;TSX;;;1.9;N;;;;0
+11;WORD;READ;11;0;P;60;2;Marion Bondoux;TSX;;;1.10;N;;;;0
+12;WORD;READ;12;0;P;60;2;Stagiaire 1;TSX;;;1.11;N;;;;0
+13;WORD;READ;13;0;P;60;2;Romain Duchesnes;TSX;;;1.12;N;;;;0
+14;WORD;READ;14;0;P;60;2;Florent Marchand;TSX;;;1.13;N;;;;0
+15;WORD;READ;15;0;P;60;2;Nicolas Ducret;TSX;;;1.14;N;;;;0
+16;WORD;READ;16;0;P;60;2;Pascal Démas;TSX;;;1.15;N;;;;0
+17;WORD;READ;17;0;P;60;2;Stagiaire 3;TSX;;;1.16;N;;;;0
+18;WORD;READ;18;0;P;60;2;Sylvain Defail;TSX;;;1.17;N;;;;0
+19;WORD;READ;19;0;P;60;2;Sylvain Verne;TSX;;;1.18;N;;;;0
+20;WORD;READ;20;0;P;60;2;Alexandre Micard;TSX;;;1.19;N;;;;0
+21;WORD;READ;21;0;P;60;2;Bernard Lechere;TSX;;;1.20;N;;;;0
+22;WORD;READ;22;0;P;60;2;Remi Margeurite;TSX;;;1.21;N;;;;0
+23;WORD;READ;23;0;P;60;2;Christophe Prigent;TSX;;;1.22;N;;;;0
+24;WORD;READ;24;0;P;60;2;Raphaël Besson;TSX;;;1.23;N;;;;0
+25;WORD;READ;25;0;P;60;2;SAP2i 1;TSX;;;1.24;N;;;;0
+26;WORD;READ;26;0;P;60;2;William Deschaseaux;TSX;;;1.25;N;;;;0
+27;WORD;READ;27;0;P;60;2;Simon Payardelle;TSX;;;1.26;N;;;;0
+28;WORD;READ;28;0;P;60;2;Dominique Chevalier;TSX;;;1.27;N;;;;0
+29;WORD;READ;29;0;P;60;2;Christelle Duchesnes;TSX;;;1.28;N;;;;0
+30;WORD;READ;30;0;P;60;2;Nicolas Adam;TSX;;;1.29;N;;;;0
+31;WORD;READ;31;0;P;60;2;Florianne Abadi;TSX;;;1.30;N;;;;0
+32;WORD;READ;32;0;P;60;2;Stagiaire 2;TSX;;;1.31;N;;;;0
+33;WORD;READ;33;0;P;60;2;Invité 1;TSX;;;1.32;N;;;;0
+34;WORD;READ;34;0;P;60;2;Invité 2;TSX;;;1.33;N;;;;0
+35;WORD;READ;35;0;P;60;2;Iveco;TSX;;;1.34;N;;;;0
+36;WORD;READ;36;0;P;60;2;Benjamin Ducret;TSX;;;1.35;N;;;;0
+37;WORD;READ;37;0;P;60;2;Simon Zonca;TSX;;;1.36;N;;;;0
+38;WORD;READ;38;0;P;60;2;SAP2i 2;TSX;;;1.37;N;;;;0
+39;WORD;READ;39;0;P;60;2;SAP2i 3;TSX;;;1.38;N;;;;0
+40;WORD;READ;40;0;P;60;2;Porte garage;TSX;;;1.39;N;;;;0
+41;WORD;READ;41;0;P;60;2;Porte sas;TSX;;;1.40;N;;;;0
+42;WORD;READ;42;0;P;60;2;SAP2i;TSX;;;1.41;N;;;;0
+43;WORD;READ;43;0;P;60;2;Bp sas;TSX;;;1.42;N;;;;0
+44;WORD;READ;44;0;P;60;2;Position portail;TSX;;;1.43;N;;;;0
+45;WORD;READ;45;0;P;60;2;Inter crépusculaire;TSX;;;1.44;N;;;;0
+46;WORD;READ;46;0;P;60;2;Digicode : code 1;TSX;;;1.45;N;;;;0
+47;WORD;READ;47;0;P;60;2;Volumétrique entrée;TSX;;;1.46;N;;;;0
+48;WORD;READ;48;0;P;60;2;Volumétrique B.E.;TSX;;;1.47;N;;;;0
+49;WORD;READ;49;0;P;60;2;Volumétrique atelier;TSX;;;1.48;N;;;;0
+50;WORD;READ;50;0;P;60;2;Digicode : code 2;TSX;;;1.49;N;;;;0
+51;WORD;READ;51;0;P;60;2;Contact porte sectionnelle;TSX;;;1.50;N;;;;0
+52;WORD;READ;52;0;P;60;2;Contact porte atelier;TSX;;;1.51;N;;;;0
+53;WORD;READ;53;0;P;60;2;Bp livraison atelier;TSX;;;1.52;N;;;;0
+54;WORD;READ;54;0;P;60;2;BP livraison SAS entrée;TSX;;;1.53;N;;;;0
+55;WORD;READ;55;0;P;60;2;Incendie;TSX;;;1.54;N;;;;0
+56;WORD;READ;56;0;P;60;2;Reserve;TSX;;;1.55;N;;;;0
+57;WORD;READ;57;0;P;60;2;Reserve;TSX;;;1.56;N;;;;0
+58;WORD;READ;58;0;P;60;2;Reserve;TSX;;;1.57;N;;;;0
+59;WORD;READ;59;0;P;60;2;Variable_Test;TSX;;;1.58;N;;;;0
+60;WORD;READ;60;0;P;60;2;Poubelle;TSX;;;1.59;N;;;;0
+61;WORD;READ;61;0;P;60;2;Porte stagiaires et invité;TSX;;;1.60;N;;;;0
+62;WORD;READ;62;0;P;60;2;Porte SAS entrée;TSX;;;1.61;N;;;;0
+63;WORD;READ;63;0;P;60;2;Porte garage;TSX;;;1.62;N;;;;0
+64;WORD;READ;64;0;P;60;2;Volets et lumière atelier;TSX;;;1.63;N;;;;0
+65;WORD;READ;65;0;P;60;2;Fermeture portail;TSX;;;1.64;N;;;;0
+66;WORD;READ;66;0;P;60;2;Eclairage exterieure;TSX;;;1.65;N;;;;0
+67;WORD;READ;67;0;P;60;2;Sonnette;TSX;;;1.66;N;;;;0
+68;WORD;READ;68;0;P;60;2;Bit tempo sirène;TSX;;;1.67;N;;;;0
+69;WORD;READ;69;0;P;60;2;Sirène;TSX;;;1.68;N;;;;0
+70;WORD;READ;70;0;P;60;2;Ouverture porte;TSX;;;1.69;N;;;;0
+71;WORD;READ;71;0;P;60;2;Fermeture volets lumiere;TSX;;;1.70;N;;;;0
+72;WORD;READ;72;0;P;60;2;Eclairage;TSX;;;1.71;N;;;;0
+73;WORD;READ;73;0;P;60;2;Ouverture_matin;TSX;;;1.72;N;;;;0
+74;WORD;READ;74;0;P;60;2;Intrusion;TSX;;;1.73;N;;;;0
+75;WORD;READ;75;0;P;60;2;Présence;TSX;;;1.74;N;;;;0
+76;WORD;READ;76;0;P;60;2;Site surveillé;TSX;;;1.75;N;;;;0
+77;WORD;READ;77;0;P;60;2;Demande code;TSX;;;1.76;N;;;;0
+78;WORD;READ;78;0;P;60;2;Défaut intrusion;TSX;;;1.77;N;;;;0
+79;WORD;READ;79;0;P;60;2;Mot de vie;TSX;;;1.78;N;;;;0
+80;WORD;READ;80;0;P;60;2;Eclairage extérieur;TSX;;;1.79;N;;;;0
+81;WORD;READ;81;0;P;60;2;Bp livraison entrée;TSX;;;1.80;N;;;;0
+82;WORD;READ;82;0;P;60;2;Bp livraison atelier;TSX;;;1.81;N;;;;0
+83;WORD;READ;83;0;P;60;2;Bp sas;TSX;;;1.82;N;;;;0
+84;WORD;READ;84;0;P;60;2;Sonnette;TSX;;;1.83;N;;;;0
+85;WORD;READ;85;0;P;60;2;Ouverture porte entrée;TSX;;;1.84;N;;;;0
+86;WORD;READ;86;0;P;60;2;Ouverture porte atelier;TSX;;;1.85;N;;;;0
+87;WORD;READ;87;0;P;60;2;Commande man volet;TSX;;;1.86;N;;;;0
+88;WORD;READ;88;0;P;60;2;Commande man portail;TSX;;;1.87;N;;;;0
+89;WORD;READ;89;0;P;60;2;Commande man éclairage ext;TSX;;;1.88;N;;;;0
+90;WORD;READ;90;0;P;60;2;Commande man porte sas entrée;TSX;;;1.89;N;;;;0
+91;WORD;READ;91;0;P;60;2;Commande man porte atelier;TSX;;;1.90;N;;;;0
+92;WORD;READ;92;0;P;60;2;Commande man porte atelier;TSX;;;1.91;N;;;;1
+93;WORD;READ;93;0;P;60;2;Commande man porte atelier;TSX;;;1.92;N;;;;2
+94;WORD;READ;94;0;P;60;2;Commande man porte atelier;TSX;;;1.93;N;;;;3
+95;WORD;READ;95;0;P;60;2;Commande man porte atelier;TSX;;;1.94;N;;;;4
+96;WORD;READ;96;0;P;60;2;Commande man porte atelier;TSX;;;1.95;N;;;;5
+97;WORD;READ;97;0;P;60;2;Commande man porte atelier;TSX;;;1.96;N;;;;6
+98;WORD;READ;98;0;P;60;2;Commande man porte atelier;TSX;;;1.97;N;;;;7
+99;WORD;READ;99;0;P;60;2;Commande man porte atelier;TSX;;;1.98;N;;;;8
+100;WORD;READ;100;0;P;60;2;Commande man porte atelier;TSX;;;1.99;N;;;;9
+101;WORD;READ;101;0;P;60;2;Commande man porte atelier;TSX;;;1.100;N;;;;10
+102;WORD;READ;102;0;P;60;2;Commande man porte atelier;TSX;;;1.101;N;;;;11
+103;WORD;READ;103;0;P;60;2;Commande man porte atelier;TSX;;;1.102;N;;;;12
+104;WORD;READ;104;0;P;60;2;Commande man porte atelier;TSX;;;1.103;N;;;;13
+105;WORD;READ;105;0;P;60;2;Commande man porte atelier;TSX;;;1.104;N;;;;14
+106;WORD;READ;106;0;P;60;2;Commande man porte atelier;TSX;;;1.105;N;;;;15
+107;WORD;READ;107;0;P;60;2;Commande man porte atelier;TSX;;;1.106;N;;;;16
+108;WORD;READ;108;0;P;60;2;Commande man porte atelier;TSX;;;1.107;N;;;;17
+109;WORD;READ;109;0;P;60;2;Commande man porte atelier;TSX;;;1.108;N;;;;18
+110;WORD;READ;110;0;P;60;2;Commande man porte atelier;TSX;;;1.109;N;;;;19
+111;WORD;READ;111;0;P;60;2;Commande man porte atelier;TSX;;;1.110;N;;;;20
+112;WORD;READ;112;0;P;60;2;Commande man porte atelier;TSX;;;1.111;N;;;;21
+113;WORD;READ;113;0;P;60;2;Commande man porte atelier;TSX;;;1.112;N;;;;22
+114;WORD;READ;114;0;P;60;2;Commande man porte atelier;TSX;;;1.113;N;;;;23
+115;WORD;READ;115;0;P;60;2;Commande man porte atelier;TSX;;;1.114;N;;;;24
+116;WORD;READ;116;0;P;60;2;Commande man porte atelier;TSX;;;1.115;N;;;;25
+117;WORD;READ;117;0;P;60;2;Commande man porte atelier;TSX;;;1.116;N;;;;26
+118;WORD;READ;118;0;P;60;2;Commande man porte atelier;TSX;;;1.117;N;;;;27
+119;WORD;READ;119;0;P;60;2;Commande man porte atelier;TSX;;;1.118;N;;;;28
+120;WORD;READ;120;0;P;60;2;Commande man porte atelier;TSX;;;1.119;N;;;;29
+121;WORD;READ;121;0;P;60;2;Commande man porte atelier;TSX;;;1.120;N;;;;30
+122;WORD;READ;122;0;P;60;2;Commande man porte atelier;TSX;;;1.121;N;;;;31
+123;WORD;READ;123;0;P;60;2;Commande man porte atelier;TSX;;;1.122;N;;;;32
+124;WORD;READ;124;0;P;60;2;Commande man porte atelier;TSX;;;1.123;N;;;;33
+125;WORD;READ;125;0;P;60;2;Commande man porte atelier;TSX;;;1.124;N;;;;34
+126;WORD;READ;126;0;P;60;2;Commande man porte atelier;TSX;;;1.125;N;;;;35
+127;WORD;READ;127;0;P;60;2;Commande man porte atelier;TSX;;;1.126;N;;;;36
+128;WORD;READ;128;0;P;60;2;Commande man porte atelier;TSX;;;1.127;N;;;;37
+129;WORD;READ;129;0;P;60;2;Commande man porte atelier;TSX;;;1.128;N;;;;38
+130;WORD;READ;130;0;P;60;2;Commande man porte atelier;TSX;;;1.129;N;;;;39
+131;WORD;READ;131;0;P;60;2;Commande man porte atelier;TSX;;;1.130;N;;;;40
+132;WORD;READ;132;0;P;60;2;Commande man porte atelier;TSX;;;1.131;N;;;;41
+133;WORD;READ;133;0;P;60;2;Commande man porte atelier;TSX;;;1.132;N;;;;42
+134;WORD;READ;134;0;P;60;2;Commande man porte atelier;TSX;;;1.133;N;;;;43
+135;WORD;READ;135;0;P;60;2;Commande man porte atelier;TSX;;;1.134;N;;;;44
+136;WORD;READ;136;0;P;60;2;Commande man porte atelier;TSX;;;1.135;N;;;;45
+137;WORD;READ;137;0;P;60;2;Commande man porte atelier;TSX;;;1.136;N;;;;46
+138;WORD;READ;138;0;P;60;2;Commande man porte atelier;TSX;;;1.137;N;;;;47
+139;WORD;READ;139;0;P;60;2;Commande man porte atelier;TSX;;;1.138;N;;;;48
+140;WORD;READ;140;0;P;60;2;Commande man porte atelier;TSX;;;1.139;N;;;;49
+141;WORD;READ;141;0;P;60;2;Commande man porte atelier;TSX;;;1.140;N;;;;50
+142;WORD;READ;142;0;P;60;2;Commande man porte atelier;TSX;;;1.141;N;;;;51
+143;WORD;READ;143;0;P;60;2;Commande man porte atelier;TSX;;;1.142;N;;;;52
+144;WORD;READ;144;0;P;60;2;Commande man porte atelier;TSX;;;1.143;N;;;;53
+145;WORD;READ;145;0;P;60;2;Commande man porte atelier;TSX;;;1.144;N;;;;54
+146;WORD;READ;146;0;P;60;2;Commande man porte atelier;TSX;;;1.145;N;;;;55
+147;WORD;READ;147;0;P;60;2;Commande man porte atelier;TSX;;;1.146;N;;;;56
+148;WORD;READ;148;0;P;60;2;Commande man porte atelier;TSX;;;1.147;N;;;;57
+149;WORD;READ;149;0;P;60;2;Commande man porte atelier;TSX;;;1.148;N;;;;58
+150;WORD;READ;150;0;P;60;2;Commande man porte atelier;TSX;;;1.149;N;;;;59
+151;WORD;READ;151;0;P;60;2;Commande man porte atelier;TSX;;;1.150;N;;;;60
+152;WORD;READ;152;0;P;60;2;Commande man porte atelier;TSX;;;1.151;N;;;;61
+153;WORD;READ;153;0;P;60;2;Commande man porte atelier;TSX;;;1.152;N;;;;62
+154;WORD;READ;154;0;P;60;2;Commande man porte atelier;TSX;;;1.153;N;;;;63
+155;WORD;READ;155;0;P;60;2;Commande man porte atelier;TSX;;;1.154;N;;;;64
+156;WORD;READ;156;0;P;60;2;Commande man porte atelier;TSX;;;1.155;N;;;;65
+157;WORD;READ;157;0;P;60;2;Commande man porte atelier;TSX;;;1.156;N;;;;66
+158;WORD;READ;158;0;P;60;2;Commande man porte atelier;TSX;;;1.157;N;;;;67
+159;WORD;READ;159;0;P;60;2;Commande man porte atelier;TSX;;;1.158;N;;;;68
+160;WORD;READ;160;0;P;60;2;Commande man porte atelier;TSX;;;1.159;N;;;;69
+161;WORD;READ;161;0;P;60;2;Commande man porte atelier;TSX;;;1.160;N;;;;70
+162;WORD;READ;162;0;P;60;2;Commande man porte atelier;TSX;;;1.161;N;;;;71
+163;WORD;READ;163;0;P;60;2;Commande man porte atelier;TSX;;;1.162;N;;;;72
+164;WORD;READ;164;0;P;60;2;Commande man porte atelier;TSX;;;1.163;N;;;;73
+165;WORD;READ;165;0;P;60;2;Commande man porte atelier;TSX;;;1.164;N;;;;74
+166;WORD;READ;166;0;P;60;2;Commande man porte atelier;TSX;;;1.165;N;;;;75
+167;WORD;READ;167;0;P;60;2;Commande man porte atelier;TSX;;;1.166;N;;;;76
+168;WORD;READ;168;0;P;60;2;Commande man porte atelier;TSX;;;1.167;N;;;;77
+169;WORD;READ;169;0;P;60;2;Commande man porte atelier;TSX;;;1.168;N;;;;78
+170;WORD;READ;170;0;P;60;2;Commande man porte atelier;TSX;;;1.169;N;;;;79
+171;WORD;READ;171;0;P;60;2;Commande man porte atelier;TSX;;;1.170;N;;;;80
+172;WORD;READ;172;0;P;60;2;Commande man porte atelier;TSX;;;1.171;N;;;;81
+173;WORD;READ;173;0;P;60;2;Commande man porte atelier;TSX;;;1.172;N;;;;82
+174;WORD;READ;174;0;P;60;2;Commande man porte atelier;TSX;;;1.173;N;;;;83
+175;WORD;READ;175;0;P;60;2;Commande man porte atelier;TSX;;;1.174;N;;;;84
+176;WORD;READ;176;0;P;60;2;Commande man porte atelier;TSX;;;1.175;N;;;;85
+177;WORD;READ;177;0;P;60;2;Commande man porte atelier;TSX;;;1.176;N;;;;86
+178;WORD;READ;178;0;P;60;2;Commande man porte atelier;TSX;;;1.177;N;;;;87
+179;WORD;READ;179;0;P;60;2;Commande man porte atelier;TSX;;;1.178;N;;;;88
+180;WORD;READ;180;0;P;60;2;Commande man porte atelier;TSX;;;1.179;N;;;;89
+181;WORD;READ;181;0;P;60;2;Commande man porte atelier;TSX;;;1.180;N;;;;90
+182;WORD;READ;182;0;P;60;2;Commande man porte atelier;TSX;;;1.181;N;;;;91
+183;WORD;READ;183;0;P;60;2;Commande man porte atelier;TSX;;;1.182;N;;;;92
+184;WORD;READ;184;0;P;60;2;Commande man porte atelier;TSX;;;1.183;N;;;;93
+185;WORD;READ;185;0;P;60;2;Commande man porte atelier;TSX;;;1.184;N;;;;94
+186;WORD;READ;186;0;P;60;2;Commande man porte atelier;TSX;;;1.185;N;;;;95
+187;WORD;READ;187;0;P;60;2;Commande man porte atelier;TSX;;;1.186;N;;;;96
+188;WORD;READ;188;0;P;60;2;Commande man porte atelier;TSX;;;1.187;N;;;;97
+189;WORD;READ;189;0;P;60;2;Commande man porte atelier;TSX;;;1.188;N;;;;98
+190;WORD;READ;190;0;P;60;2;Commande man porte atelier;TSX;;;1.189;N;;;;99
+191;WORD;READ;191;0;P;60;2;Commande man porte atelier;TSX;;;1.190;N;;;;100
+192;WORD;READ;192;0;P;60;2;Commande man porte atelier;TSX;;;1.191;N;;;;101
+193;WORD;READ;193;0;P;60;2;Commande man porte atelier;TSX;;;1.192;N;;;;102
+194;WORD;READ;194;0;P;60;2;Commande man porte atelier;TSX;;;1.193;N;;;;103
+195;WORD;READ;195;0;P;60;2;Commande man porte atelier;TSX;;;1.194;N;;;;104
+196;WORD;READ;196;0;P;60;2;Commande man porte atelier;TSX;;;1.195;N;;;;105
+197;WORD;READ;197;0;P;60;2;Commande man porte atelier;TSX;;;1.196;N;;;;106
+198;WORD;READ;198;0;P;60;2;Commande man porte atelier;TSX;;;1.197;N;;;;107
+199;WORD;READ;199;0;P;60;2;Commande man porte atelier;TSX;;;1.198;N;;;;108
+200;WORD;READ;200;0;P;60;2;Commande man porte atelier;TSX;;;1.199;N;;;;109
+201;WORD;READ;201;0;P;60;2;Commande man porte atelier;TSX;;;1.200;N;;;;110
+202;WORD;READ;202;0;P;60;2;Commande man porte atelier;TSX;;;1.201;N;;;;111
+203;WORD;READ;203;0;P;60;2;Commande man porte atelier;TSX;;;1.202;N;;;;112
+204;WORD;READ;204;0;P;60;2;Commande man porte atelier;TSX;;;1.203;N;;;;113
+205;WORD;READ;205;0;P;60;2;Commande man porte atelier;TSX;;;1.204;N;;;;114
+206;WORD;READ;206;0;P;60;2;Commande man porte atelier;TSX;;;1.205;N;;;;115
+207;WORD;READ;207;0;P;60;2;Commande man porte atelier;TSX;;;1.206;N;;;;116
+208;WORD;READ;208;0;P;60;2;Commande man porte atelier;TSX;;;1.207;N;;;;117
+209;WORD;READ;209;0;P;60;2;Commande man porte atelier;TSX;;;1.208;N;;;;118
+210;WORD;READ;210;0;P;60;2;Commande man porte atelier;TSX;;;1.209;N;;;;119
+211;WORD;READ;211;0;P;60;2;Commande man porte atelier;TSX;;;1.210;N;;;;120
+212;WORD;READ;212;0;P;60;2;Commande man porte atelier;TSX;;;1.211;N;;;;121
+213;WORD;READ;213;0;P;60;2;Commande man porte atelier;TSX;;;1.212;N;;;;122
+214;WORD;READ;214;0;P;60;2;Commande man porte atelier;TSX;;;1.213;N;;;;123
+215;WORD;READ;215;0;P;60;2;Commande man porte atelier;TSX;;;1.214;N;;;;124
+216;WORD;READ;216;0;P;60;2;Commande man porte atelier;TSX;;;1.215;N;;;;125
+217;WORD;READ;217;0;P;60;2;Commande man porte atelier;TSX;;;1.216;N;;;;126
+218;WORD;READ;218;0;P;60;2;Commande man porte atelier;TSX;;;1.217;N;;;;127
+219;WORD;READ;219;0;P;60;2;Commande man porte atelier;TSX;;;1.218;N;;;;128
+220;WORD;READ;220;0;P;60;2;Commande man porte atelier;TSX;;;1.219;N;;;;129
+221;WORD;READ;221;0;P;60;2;Commande man porte atelier;TSX;;;1.220;N;;;;130
+222;WORD;READ;222;0;P;60;2;Commande man porte atelier;TSX;;;1.221;N;;;;131
+223;WORD;READ;223;0;P;60;2;Commande man porte atelier;TSX;;;1.222;N;;;;132
+224;WORD;READ;224;0;P;60;2;Commande man porte atelier;TSX;;;1.223;N;;;;133
+225;WORD;READ;225;0;P;60;2;Commande man porte atelier;TSX;;;1.224;N;;;;134
+226;WORD;READ;226;0;P;60;2;Commande man porte atelier;TSX;;;1.225;N;;;;135
+227;WORD;READ;227;0;P;60;2;Commande man porte atelier;TSX;;;1.226;N;;;;136
+228;WORD;READ;228;0;P;60;2;Commande man porte atelier;TSX;;;1.227;N;;;;137
+229;WORD;READ;229;0;P;60;2;Commande man porte atelier;TSX;;;1.228;N;;;;138
+230;WORD;READ;230;0;P;60;2;Commande man porte atelier;TSX;;;1.229;N;;;;139
+231;WORD;READ;231;0;P;60;2;Commande man porte atelier;TSX;;;1.230;N;;;;140
+232;WORD;READ;232;0;P;60;2;Commande man porte atelier;TSX;;;1.231;N;;;;141
+233;WORD;READ;233;0;P;60;2;Commande man porte atelier;TSX;;;1.232;N;;;;142
+234;WORD;READ;234;0;P;60;2;Commande man porte atelier;TSX;;;1.233;N;;;;143
+235;WORD;READ;235;0;P;60;2;Commande man porte atelier;TSX;;;1.234;N;;;;144
+236;WORD;READ;236;0;P;60;2;Commande man porte atelier;TSX;;;1.235;N;;;;145
+237;WORD;READ;237;0;P;60;2;Commande man porte atelier;TSX;;;1.236;N;;;;146
+238;WORD;READ;238;0;P;60;2;Commande man porte atelier;TSX;;;1.237;N;;;;147
+239;WORD;READ;239;0;P;60;2;Commande man porte atelier;TSX;;;1.238;N;;;;148
+240;WORD;READ;240;0;P;60;2;Commande man porte atelier;TSX;;;1.239;N;;;;149
+241;WORD;READ;241;0;P;60;2;Commande man porte atelier;TSX;;;1.240;N;;;;150
+242;WORD;READ;242;0;P;60;2;Commande man porte atelier;TSX;;;1.241;N;;;;151
+243;WORD;READ;243;0;P;60;2;Commande man porte atelier;TSX;;;1.242;N;;;;152
+244;WORD;READ;244;0;P;60;2;Commande man porte atelier;TSX;;;1.243;N;;;;153
+245;WORD;READ;245;0;P;60;2;Commande man porte atelier;TSX;;;1.244;N;;;;154
+246;WORD;READ;246;0;P;60;2;Commande man porte atelier;TSX;;;1.245;N;;;;155
+247;WORD;READ;247;0;P;60;2;Commande man porte atelier;TSX;;;1.246;N;;;;156
+248;WORD;READ;248;0;P;60;2;Commande man porte atelier;TSX;;;1.247;N;;;;157
+249;WORD;READ;249;0;P;60;2;Commande man porte atelier;TSX;;;1.248;N;;;;158
+250;WORD;READ;250;0;P;60;2;Commande man porte atelier;TSX;;;1.249;N;;;;159
+251;WORD;READ;251;0;P;60;2;Commande man porte atelier;TSX;;;1.250;N;;;;160
+252;WORD;READ;252;0;P;60;2;Commande man porte atelier;TSX;;;1.251;N;;;;161
+253;WORD;READ;253;0;P;60;2;Commande man porte atelier;TSX;;;1.252;N;;;;162
+254;WORD;READ;254;0;P;60;2;Commande man porte atelier;TSX;;;1.253;N;;;;163
+255;WORD;READ;255;0;P;60;2;Commande man porte atelier;TSX;;;1.254;N;;;;164
+256;WORD;READ;256;0;P;60;2;Commande man porte atelier;TSX;;;1.255;N;;;;165
+257;WORD;READ;257;0;P;60;2;Commande man porte atelier;TSX;;;1.256;N;;;;166
+258;WORD;READ;258;0;P;60;2;Commande man porte atelier;TSX;;;1.257;N;;;;167
+259;WORD;READ;259;0;P;60;2;Commande man porte atelier;TSX;;;1.258;N;;;;168
+260;WORD;READ;260;0;P;60;2;Commande man porte atelier;TSX;;;1.259;N;;;;169
+261;WORD;READ;261;0;P;60;2;Commande man porte atelier;TSX;;;1.260;N;;;;170
+262;WORD;READ;262;0;P;60;2;Commande man porte atelier;TSX;;;1.261;N;;;;171
+263;WORD;READ;263;0;P;60;2;Commande man porte atelier;TSX;;;1.262;N;;;;172
+264;WORD;READ;264;0;P;60;2;Commande man porte atelier;TSX;;;1.263;N;;;;173
+265;WORD;READ;265;0;P;60;2;Commande man porte atelier;TSX;;;1.264;N;;;;174
+266;WORD;READ;266;0;P;60;2;Commande man porte atelier;TSX;;;1.265;N;;;;175
+267;WORD;READ;267;0;P;60;2;Commande man porte atelier;TSX;;;1.266;N;;;;176
+268;WORD;READ;268;0;P;60;2;Commande man porte atelier;TSX;;;1.267;N;;;;177
+269;WORD;READ;269;0;P;60;2;Commande man porte atelier;TSX;;;1.268;N;;;;178
+270;WORD;READ;270;0;P;60;2;Commande man porte atelier;TSX;;;1.269;N;;;;179
+271;WORD;READ;271;0;P;60;2;Commande man porte atelier;TSX;;;1.270;N;;;;180
+272;WORD;READ;272;0;P;60;2;Commande man porte atelier;TSX;;;1.271;N;;;;181
+273;WORD;READ;273;0;P;60;2;Commande man porte atelier;TSX;;;1.272;N;;;;182
+274;WORD;READ;274;0;P;60;2;Commande man porte atelier;TSX;;;1.273;N;;;;183
+275;WORD;READ;275;0;P;60;2;Commande man porte atelier;TSX;;;1.274;N;;;;184
+276;WORD;READ;276;0;P;60;2;Commande man porte atelier;TSX;;;1.275;N;;;;185
+277;WORD;READ;277;0;P;60;2;Commande man porte atelier;TSX;;;1.276;N;;;;186
+278;WORD;READ;278;0;P;60;2;Commande man porte atelier;TSX;;;1.277;N;;;;187
+279;WORD;READ;279;0;P;60;2;Commande man porte atelier;TSX;;;1.278;N;;;;188
+280;WORD;READ;280;0;P;60;2;Commande man porte atelier;TSX;;;1.279;N;;;;189
+281;WORD;READ;281;0;P;60;2;Commande man porte atelier;TSX;;;1.280;N;;;;190
+282;WORD;READ;282;0;P;60;2;Commande man porte atelier;TSX;;;1.281;N;;;;191
+283;WORD;READ;283;0;P;60;2;Commande man porte atelier;TSX;;;1.282;N;;;;192
+284;WORD;READ;284;0;P;60;2;Commande man porte atelier;TSX;;;1.283;N;;;;193
+285;WORD;READ;285;0;P;60;2;Commande man porte atelier;TSX;;;1.284;N;;;;194
+286;WORD;READ;286;0;P;60;2;Commande man porte atelier;TSX;;;1.285;N;;;;195
+287;WORD;READ;287;0;P;60;2;Commande man porte atelier;TSX;;;1.286;N;;;;196
+288;WORD;READ;288;0;P;60;2;Commande man porte atelier;TSX;;;1.287;N;;;;197
+289;WORD;READ;289;0;P;60;2;Commande man porte atelier;TSX;;;1.288;N;;;;198
+290;WORD;READ;290;0;P;60;2;Commande man porte atelier;TSX;;;1.289;N;;;;199
+291;WORD;READ;291;0;P;60;2;Commande man porte atelier;TSX;;;1.290;N;;;;200
+292;WORD;READ;292;0;P;60;2;Commande man porte atelier;TSX;;;1.291;N;;;;201
+293;WORD;READ;293;0;P;60;2;Commande man porte atelier;TSX;;;1.292;N;;;;202
+294;WORD;READ;294;0;P;60;2;Commande man porte atelier;TSX;;;1.293;N;;;;203
+295;WORD;READ;295;0;P;60;2;Commande man porte atelier;TSX;;;1.294;N;;;;204
+296;WORD;READ;296;0;P;60;2;Commande man porte atelier;TSX;;;1.295;N;;;;205
+297;WORD;READ;297;0;P;60;2;Commande man porte atelier;TSX;;;1.296;N;;;;206
+298;WORD;READ;298;0;P;60;2;Commande man porte atelier;TSX;;;1.297;N;;;;207
+299;WORD;READ;299;0;P;60;2;Commande man porte atelier;TSX;;;1.298;N;;;;208
+300;WORD;READ;300;0;P;60;2;Commande man porte atelier;TSX;;;1.299;N;;;;209
+301;WORD;READ;301;0;P;60;2;Commande man porte atelier;TSX;;;1.300;N;;;;210
+302;WORD;READ;302;0;P;60;2;Commande man porte atelier;TSX;;;1.301;N;;;;211
+303;WORD;READ;303;0;P;60;2;Commande man porte atelier;TSX;;;1.302;N;;;;212
+304;WORD;READ;304;0;P;60;2;Commande man porte atelier;TSX;;;1.303;N;;;;213
+305;WORD;READ;305;0;P;60;2;Commande man porte atelier;TSX;;;1.304;N;;;;214
+306;WORD;READ;306;0;P;60;2;Commande man porte atelier;TSX;;;1.305;N;;;;215
+307;WORD;READ;307;0;P;60;2;Commande man porte atelier;TSX;;;1.306;N;;;;216
+308;WORD;READ;308;0;P;60;2;Commande man porte atelier;TSX;;;1.307;N;;;;217
+309;WORD;READ;309;0;P;60;2;Commande man porte atelier;TSX;;;1.308;N;;;;218
+310;WORD;READ;310;0;P;60;2;Commande man porte atelier;TSX;;;1.309;N;;;;219
+311;WORD;READ;311;0;P;60;2;Commande man porte atelier;TSX;;;1.310;N;;;;220
+312;WORD;READ;312;0;P;60;2;Commande man porte atelier;TSX;;;1.311;N;;;;221
+313;WORD;READ;313;0;P;60;2;Commande man porte atelier;TSX;;;1.312;N;;;;222
+314;WORD;READ;314;0;P;60;2;Commande man porte atelier;TSX;;;1.313;N;;;;223
+315;WORD;READ;315;0;P;60;2;Commande man porte atelier;TSX;;;1.314;N;;;;224
+316;WORD;READ;316;0;P;60;2;Commande man porte atelier;TSX;;;1.315;N;;;;225
+317;WORD;READ;317;0;P;60;2;Commande man porte atelier;TSX;;;1.316;N;;;;226
+318;WORD;READ;318;0;P;60;2;Commande man porte atelier;TSX;;;1.317;N;;;;227
+319;WORD;READ;319;0;P;60;2;Commande man porte atelier;TSX;;;1.318;N;;;;228
+320;WORD;READ;320;0;P;60;2;Commande man porte atelier;TSX;;;1.319;N;;;;229
+321;WORD;READ;321;0;P;60;2;Commande man porte atelier;TSX;;;1.320;N;;;;230
+322;WORD;READ;322;0;P;60;2;Commande man porte atelier;TSX;;;1.321;N;;;;231
+323;WORD;READ;323;0;P;60;2;Commande man porte atelier;TSX;;;1.322;N;;;;232
+324;WORD;READ;324;0;P;60;2;Commande man porte atelier;TSX;;;1.323;N;;;;233
+325;WORD;READ;325;0;P;60;2;Commande man porte atelier;TSX;;;1.324;N;;;;234
+326;WORD;READ;326;0;P;60;2;Commande man porte atelier;TSX;;;1.325;N;;;;235
+327;WORD;READ;327;0;P;60;2;Commande man porte atelier;TSX;;;1.326;N;;;;236
+328;WORD;READ;328;0;P;60;2;Commande man porte atelier;TSX;;;1.327;N;;;;237
+329;WORD;READ;329;0;P;60;2;Commande man porte atelier;TSX;;;1.328;N;;;;238
+330;WORD;READ;330;0;P;60;2;Commande man porte atelier;TSX;;;1.329;N;;;;239
+331;WORD;READ;331;0;P;60;2;Commande man porte atelier;TSX;;;1.330;N;;;;240
+332;WORD;READ;332;0;P;60;2;Commande man porte atelier;TSX;;;1.331;N;;;;241
+333;WORD;READ;333;0;P;60;2;Commande man porte atelier;TSX;;;1.332;N;;;;242
+334;WORD;READ;334;0;P;60;2;Commande man porte atelier;TSX;;;1.333;N;;;;243
+335;WORD;READ;335;0;P;60;2;Commande man porte atelier;TSX;;;1.334;N;;;;244
+336;WORD;READ;336;0;P;60;2;Commande man porte atelier;TSX;;;1.335;N;;;;245
+337;WORD;READ;337;0;P;60;2;Commande man porte atelier;TSX;;;1.336;N;;;;246
+338;WORD;READ;338;0;P;60;2;Commande man porte atelier;TSX;;;1.337;N;;;;247
+339;WORD;READ;339;0;P;60;2;Commande man porte atelier;TSX;;;1.338;N;;;;248
+340;WORD;READ;340;0;P;60;2;Commande man porte atelier;TSX;;;1.339;N;;;;249
+341;WORD;READ;341;0;P;60;2;Commande man porte atelier;TSX;;;1.340;N;;;;250
+342;WORD;READ;342;0;P;60;2;Commande man porte atelier;TSX;;;1.341;N;;;;251
+343;WORD;READ;343;0;P;60;2;Commande man porte atelier;TSX;;;1.342;N;;;;252
+344;WORD;READ;344;0;P;60;2;Commande man porte atelier;TSX;;;1.343;N;;;;253
+345;WORD;READ;345;0;P;60;2;Commande man porte atelier;TSX;;;1.344;N;;;;254
+346;WORD;READ;346;0;P;60;2;Commande man porte atelier;TSX;;;1.345;N;;;;255
+347;WORD;READ;347;0;P;60;2;Commande man porte atelier;TSX;;;1.346;N;;;;256
+348;WORD;READ;348;0;P;60;2;Commande man porte atelier;TSX;;;1.347;N;;;;257
+349;WORD;READ;349;0;P;60;2;Commande man porte atelier;TSX;;;1.348;N;;;;258
+350;WORD;READ;350;0;P;60;2;Commande man porte atelier;TSX;;;1.349;N;;;;259
+351;WORD;READ;351;0;P;60;2;Commande man porte atelier;TSX;;;1.350;N;;;;260
+352;WORD;READ;352;0;P;60;2;Commande man porte atelier;TSX;;;1.351;N;;;;261
+353;WORD;READ;353;0;P;60;2;Commande man porte atelier;TSX;;;1.352;N;;;;262
+354;WORD;READ;354;0;P;60;2;Commande man porte atelier;TSX;;;1.353;N;;;;263
+355;WORD;READ;355;0;P;60;2;Commande man porte atelier;TSX;;;1.354;N;;;;264
+356;WORD;READ;356;0;P;60;2;Commande man porte atelier;TSX;;;1.355;N;;;;265
+357;WORD;READ;357;0;P;60;2;Commande man porte atelier;TSX;;;1.356;N;;;;266
+358;WORD;READ;358;0;P;60;2;Commande man porte atelier;TSX;;;1.357;N;;;;267
+359;WORD;READ;359;0;P;60;2;Commande man porte atelier;TSX;;;1.358;N;;;;268
+360;WORD;READ;360;0;P;60;2;Commande man porte atelier;TSX;;;1.359;N;;;;269
+361;WORD;READ;361;0;P;60;2;Commande man porte atelier;TSX;;;1.360;N;;;;270
+362;WORD;READ;362;0;P;60;2;Commande man porte atelier;TSX;;;1.361;N;;;;271
+363;WORD;READ;363;0;P;60;2;Commande man porte atelier;TSX;;;1.362;N;;;;272
+364;WORD;READ;364;0;P;60;2;Commande man porte atelier;TSX;;;1.363;N;;;;273
+365;WORD;READ;365;0;P;60;2;Commande man porte atelier;TSX;;;1.364;N;;;;274
+366;WORD;READ;366;0;P;60;2;Commande man porte atelier;TSX;;;1.365;N;;;;275
+367;WORD;READ;367;0;P;60;2;Commande man porte atelier;TSX;;;1.366;N;;;;276
+368;WORD;READ;368;0;P;60;2;Commande man porte atelier;TSX;;;1.367;N;;;;277
+369;WORD;READ;369;0;P;60;2;Commande man porte atelier;TSX;;;1.368;N;;;;278
+370;WORD;READ;370;0;P;60;2;Commande man porte atelier;TSX;;;1.369;N;;;;279
+371;WORD;READ;371;0;P;60;2;Commande man porte atelier;TSX;;;1.370;N;;;;280
+372;WORD;READ;372;0;P;60;2;Commande man porte atelier;TSX;;;1.371;N;;;;281
+373;WORD;READ;373;0;P;60;2;Commande man porte atelier;TSX;;;1.372;N;;;;282
+374;WORD;READ;374;0;P;60;2;Commande man porte atelier;TSX;;;1.373;N;;;;283
+375;WORD;READ;375;0;P;60;2;Commande man porte atelier;TSX;;;1.374;N;;;;284
+376;WORD;READ;376;0;P;60;2;Commande man porte atelier;TSX;;;1.375;N;;;;285
+377;WORD;READ;377;0;P;60;2;Commande man porte atelier;TSX;;;1.376;N;;;;286
+378;WORD;READ;378;0;P;60;2;Commande man porte atelier;TSX;;;1.377;N;;;;287
+379;WORD;READ;379;0;P;60;2;Commande man porte atelier;TSX;;;1.378;N;;;;288
+380;WORD;READ;380;0;P;60;2;Commande man porte atelier;TSX;;;1.379;N;;;;289
+381;WORD;READ;381;0;P;60;2;Commande man porte atelier;TSX;;;1.380;N;;;;290
+382;WORD;READ;382;0;P;60;2;Commande man porte atelier;TSX;;;1.381;N;;;;291
+383;WORD;READ;383;0;P;60;2;Commande man porte atelier;TSX;;;1.382;N;;;;292
+384;WORD;READ;384;0;P;60;2;Commande man porte atelier;TSX;;;1.383;N;;;;293
+385;WORD;READ;385;0;P;60;2;Commande man porte atelier;TSX;;;1.384;N;;;;294
+386;WORD;READ;386;0;P;60;2;Commande man porte atelier;TSX;;;1.385;N;;;;295
+387;WORD;READ;387;0;P;60;2;Commande man porte atelier;TSX;;;1.386;N;;;;296
+388;WORD;READ;388;0;P;60;2;Commande man porte atelier;TSX;;;1.387;N;;;;297
+389;WORD;READ;389;0;P;60;2;Commande man porte atelier;TSX;;;1.388;N;;;;298
+390;WORD;READ;390;0;P;60;2;Commande man porte atelier;TSX;;;1.389;N;;;;299
+391;WORD;READ;391;0;P;60;2;Commande man porte atelier;TSX;;;1.390;N;;;;300
+392;WORD;READ;392;0;P;60;2;Commande man porte atelier;TSX;;;1.391;N;;;;301
+393;WORD;READ;393;0;P;60;2;Commande man porte atelier;TSX;;;1.392;N;;;;302
+394;WORD;READ;394;0;P;60;2;Commande man porte atelier;TSX;;;1.393;N;;;;303
+395;WORD;READ;395;0;P;60;2;Commande man porte atelier;TSX;;;1.394;N;;;;304
+396;WORD;READ;396;0;P;60;2;Commande man porte atelier;TSX;;;1.395;N;;;;305
+397;WORD;READ;397;0;P;60;2;Commande man porte atelier;TSX;;;1.396;N;;;;306
+398;WORD;READ;398;0;P;60;2;Commande man porte atelier;TSX;;;1.397;N;;;;307
+399;WORD;READ;399;0;P;60;2;Commande man porte atelier;TSX;;;1.398;N;;;;308
+400;WORD;READ;400;0;P;60;2;Commande man porte atelier;TSX;;;1.399;N;;;;309
+401;WORD;READ;401;0;P;60;2;Commande man porte atelier;TSX;;;1.400;N;;;;310
+402;WORD;READ;402;0;P;60;2;Commande man porte atelier;TSX;;;1.401;N;;;;311
+403;WORD;READ;403;0;P;60;2;Commande man porte atelier;TSX;;;1.402;N;;;;312
+404;WORD;READ;404;0;P;60;2;Commande man porte atelier;TSX;;;1.403;N;;;;313
+405;WORD;READ;405;0;P;60;2;Commande man porte atelier;TSX;;;1.404;N;;;;314
+406;WORD;READ;406;0;P;60;2;Commande man porte atelier;TSX;;;1.405;N;;;;315
+407;WORD;READ;407;0;P;60;2;Commande man porte atelier;TSX;;;1.406;N;;;;316
+408;WORD;READ;408;0;P;60;2;Commande man porte atelier;TSX;;;1.407;N;;;;317
+409;WORD;READ;409;0;P;60;2;Commande man porte atelier;TSX;;;1.408;N;;;;318
+410;WORD;READ;410;0;P;60;2;Commande man porte atelier;TSX;;;1.409;N;;;;319
+411;WORD;READ;411;0;P;60;2;Commande man porte atelier;TSX;;;1.410;N;;;;320
+412;WORD;READ;412;0;P;60;2;Commande man porte atelier;TSX;;;1.411;N;;;;321
+413;WORD;READ;413;0;P;60;2;Commande man porte atelier;TSX;;;1.412;N;;;;322
+414;WORD;READ;414;0;P;60;2;Commande man porte atelier;TSX;;;1.413;N;;;;323
+415;WORD;READ;415;0;P;60;2;Commande man porte atelier;TSX;;;1.414;N;;;;324
+416;WORD;READ;416;0;P;60;2;Commande man porte atelier;TSX;;;1.415;N;;;;325
+417;WORD;READ;417;0;P;60;2;Commande man porte atelier;TSX;;;1.416;N;;;;326
+418;WORD;READ;418;0;P;60;2;Commande man porte atelier;TSX;;;1.417;N;;;;327
+419;WORD;READ;419;0;P;60;2;Commande man porte atelier;TSX;;;1.418;N;;;;328
+420;WORD;READ;420;0;P;60;2;Commande man porte atelier;TSX;;;1.419;N;;;;329
+421;WORD;READ;421;0;P;60;2;Commande man porte atelier;TSX;;;1.420;N;;;;330
+422;WORD;READ;422;0;P;60;2;Commande man porte atelier;TSX;;;1.421;N;;;;331
+423;WORD;READ;423;0;P;60;2;Commande man porte atelier;TSX;;;1.422;N;;;;332
+424;WORD;READ;424;0;P;60;2;Commande man porte atelier;TSX;;;1.423;N;;;;333
+425;WORD;READ;425;0;P;60;2;Commande man porte atelier;TSX;;;1.424;N;;;;334
+426;WORD;READ;426;0;P;60;2;Commande man porte atelier;TSX;;;1.425;N;;;;335
+427;WORD;READ;427;0;P;60;2;Commande man porte atelier;TSX;;;1.426;N;;;;336
+428;WORD;READ;428;0;P;60;2;Commande man porte atelier;TSX;;;1.427;N;;;;337
+429;WORD;READ;429;0;P;60;2;Commande man porte atelier;TSX;;;1.428;N;;;;338
+430;WORD;READ;430;0;P;60;2;Commande man porte atelier;TSX;;;1.429;N;;;;339
+431;WORD;READ;431;0;P;60;2;Commande man porte atelier;TSX;;;1.430;N;;;;340
+432;WORD;READ;432;0;P;60;2;Commande man porte atelier;TSX;;;1.431;N;;;;341
+433;WORD;READ;433;0;P;60;2;Commande man porte atelier;TSX;;;1.432;N;;;;342
+434;WORD;READ;434;0;P;60;2;Commande man porte atelier;TSX;;;1.433;N;;;;343
+435;WORD;READ;435;0;P;60;2;Commande man porte atelier;TSX;;;1.434;N;;;;344
+436;WORD;READ;436;0;P;60;2;Commande man porte atelier;TSX;;;1.435;N;;;;345
+437;WORD;READ;437;0;P;60;2;Commande man porte atelier;TSX;;;1.436;N;;;;346
+438;WORD;READ;438;0;P;60;2;Commande man porte atelier;TSX;;;1.437;N;;;;347
+439;WORD;READ;439;0;P;60;2;Commande man porte atelier;TSX;;;1.438;N;;;;348
+440;WORD;READ;440;0;P;60;2;Commande man porte atelier;TSX;;;1.439;N;;;;349
+441;WORD;READ;441;0;P;60;2;Commande man porte atelier;TSX;;;1.440;N;;;;350
+442;WORD;READ;442;0;P;60;2;Commande man porte atelier;TSX;;;1.441;N;;;;351
+443;WORD;READ;443;0;P;60;2;Commande man porte atelier;TSX;;;1.442;N;;;;352
+444;WORD;READ;444;0;P;60;2;Commande man porte atelier;TSX;;;1.443;N;;;;353
+445;WORD;READ;445;0;P;60;2;Commande man porte atelier;TSX;;;1.444;N;;;;354
+446;WORD;READ;446;0;P;60;2;Commande man porte atelier;TSX;;;1.445;N;;;;355
+447;WORD;READ;447;0;P;60;2;Commande man porte atelier;TSX;;;1.446;N;;;;356
+448;WORD;READ;448;0;P;60;2;Commande man porte atelier;TSX;;;1.447;N;;;;357
+449;WORD;READ;449;0;P;60;2;Commande man porte atelier;TSX;;;1.448;N;;;;358
+450;WORD;READ;450;0;P;60;2;Commande man porte atelier;TSX;;;1.449;N;;;;359
+451;WORD;READ;451;0;P;60;2;Commande man porte atelier;TSX;;;1.450;N;;;;360
+452;WORD;READ;452;0;P;60;2;Commande man porte atelier;TSX;;;1.451;N;;;;361
+453;WORD;READ;453;0;P;60;2;Commande man porte atelier;TSX;;;1.452;N;;;;362
+454;WORD;READ;454;0;P;60;2;Commande man porte atelier;TSX;;;1.453;N;;;;363
+455;WORD;READ;455;0;P;60;2;Commande man porte atelier;TSX;;;1.454;N;;;;364
+456;WORD;READ;456;0;P;60;2;Commande man porte atelier;TSX;;;1.455;N;;;;365
+457;WORD;READ;457;0;P;60;2;Commande man porte atelier;TSX;;;1.456;N;;;;366
+458;WORD;READ;458;0;P;60;2;Commande man porte atelier;TSX;;;1.457;N;;;;367
+459;WORD;READ;459;0;P;60;2;Commande man porte atelier;TSX;;;1.458;N;;;;368
+460;WORD;READ;460;0;P;60;2;Commande man porte atelier;TSX;;;1.459;N;;;;369
+461;WORD;READ;461;0;P;60;2;Commande man porte atelier;TSX;;;1.460;N;;;;370
+462;WORD;READ;462;0;P;60;2;Commande man porte atelier;TSX;;;1.461;N;;;;371
+463;WORD;READ;463;0;P;60;2;Commande man porte atelier;TSX;;;1.462;N;;;;372
+464;WORD;READ;464;0;P;60;2;Commande man porte atelier;TSX;;;1.463;N;;;;373
+465;WORD;READ;465;0;P;60;2;Commande man porte atelier;TSX;;;1.464;N;;;;374
+466;WORD;READ;466;0;P;60;2;Commande man porte atelier;TSX;;;1.465;N;;;;375
+467;WORD;READ;467;0;P;60;2;Commande man porte atelier;TSX;;;1.466;N;;;;376
+468;WORD;READ;468;0;P;60;2;Commande man porte atelier;TSX;;;1.467;N;;;;377
+469;WORD;READ;469;0;P;60;2;Commande man porte atelier;TSX;;;1.468;N;;;;378
+470;WORD;READ;470;0;P;60;2;Commande man porte atelier;TSX;;;1.469;N;;;;379
+471;WORD;READ;471;0;P;60;2;Commande man porte atelier;TSX;;;1.470;N;;;;380
+472;WORD;READ;472;0;P;60;2;Commande man porte atelier;TSX;;;1.471;N;;;;381
+473;WORD;READ;473;0;P;60;2;Commande man porte atelier;TSX;;;1.472;N;;;;382
+474;WORD;READ;474;0;P;60;2;Commande man porte atelier;TSX;;;1.473;N;;;;383
+475;WORD;READ;475;0;P;60;2;Commande man porte atelier;TSX;;;1.474;N;;;;384
+476;WORD;READ;476;0;P;60;2;Commande man porte atelier;TSX;;;1.475;N;;;;385
+477;WORD;READ;477;0;P;60;2;Commande man porte atelier;TSX;;;1.476;N;;;;386
+478;WORD;READ;478;0;P;60;2;Commande man porte atelier;TSX;;;1.477;N;;;;387
+479;WORD;READ;479;0;P;60;2;Commande man porte atelier;TSX;;;1.478;N;;;;388
+480;WORD;READ;480;0;P;60;2;Commande man porte atelier;TSX;;;1.479;N;;;;389
+481;WORD;READ;481;0;P;60;2;Commande man porte atelier;TSX;;;1.480;N;;;;390
+482;WORD;READ;482;0;P;60;2;Commande man porte atelier;TSX;;;1.481;N;;;;391
+483;WORD;READ;483;0;P;60;2;Commande man porte atelier;TSX;;;1.482;N;;;;392
+484;WORD;READ;484;0;P;60;2;Commande man porte atelier;TSX;;;1.483;N;;;;393
+485;WORD;READ;485;0;P;60;2;Commande man porte atelier;TSX;;;1.484;N;;;;394
+486;WORD;READ;486;0;P;60;2;Commande man porte atelier;TSX;;;1.485;N;;;;395
+487;WORD;READ;487;0;P;60;2;Commande man porte atelier;TSX;;;1.486;N;;;;396
+488;WORD;READ;488;0;P;60;2;Commande man porte atelier;TSX;;;1.487;N;;;;397
+489;WORD;READ;489;0;P;60;2;Commande man porte atelier;TSX;;;1.488;N;;;;398
+490;WORD;READ;490;0;P;60;2;Commande man porte atelier;TSX;;;1.489;N;;;;399
+491;WORD;READ;491;0;P;60;2;Commande man porte atelier;TSX;;;1.490;N;;;;400
+492;WORD;READ;492;0;P;60;2;Commande man porte atelier;TSX;;;1.491;N;;;;401
+493;WORD;READ;493;0;P;60;2;Commande man porte atelier;TSX;;;1.492;N;;;;402
+494;WORD;READ;494;0;P;60;2;Commande man porte atelier;TSX;;;1.493;N;;;;403
+495;WORD;READ;495;0;P;60;2;Commande man porte atelier;TSX;;;1.494;N;;;;404
+496;WORD;READ;496;0;P;60;2;Commande man porte atelier;TSX;;;1.495;N;;;;405
+497;WORD;READ;497;0;P;60;2;Commande man porte atelier;TSX;;;1.496;N;;;;406
+498;WORD;READ;498;0;P;60;2;Commande man porte atelier;TSX;;;1.497;N;;;;407
+499;WORD;READ;499;0;P;60;2;Commande man porte atelier;TSX;;;1.498;N;;;;408
+500;WORD;READ;500;0;P;60;2;Commande man porte atelier;TSX;;;1.499;N;;;;409
+501;WORD;READ;501;0;P;60;2;Commande man porte atelier;TSX;;;1.500;N;;;;410
+502;WORD;READ;502;0;P;60;2;Commande man porte atelier;TSX;;;1.501;N;;;;411
+503;WORD;READ;503;0;P;60;2;Commande man porte atelier;TSX;;;1.502;N;;;;412
+504;WORD;READ;504;0;P;60;2;Commande man porte atelier;TSX;;;1.503;N;;;;413
+505;WORD;READ;505;0;P;60;2;Commande man porte atelier;TSX;;;1.504;N;;;;414
+506;WORD;READ;506;0;P;60;2;Commande man porte atelier;TSX;;;1.505;N;;;;415
+507;WORD;READ;507;0;P;60;2;Commande man porte atelier;TSX;;;1.506;N;;;;416
+508;WORD;READ;508;0;P;60;2;Commande man porte atelier;TSX;;;1.507;N;;;;417
+509;WORD;READ;509;0;P;60;2;Commande man porte atelier;TSX;;;1.508;N;;;;418
+510;WORD;READ;510;0;P;60;2;Commande man porte atelier;TSX;;;1.509;N;;;;419
+511;WORD;READ;511;0;P;60;2;Commande man porte atelier;TSX;;;1.510;N;;;;420
+512;WORD;READ;512;0;P;60;2;Commande man porte atelier;TSX;;;1.511;N;;;;421
+513;WORD;READ;513;0;P;60;2;Commande man porte atelier;TSX;;;1.512;N;;;;422
+514;WORD;READ;514;0;P;60;2;Commande man porte atelier;TSX;;;1.513;N;;;;423
+515;WORD;READ;515;0;P;60;2;Commande man porte atelier;TSX;;;1.514;N;;;;424
+516;WORD;READ;516;0;P;60;2;Commande man porte atelier;TSX;;;1.515;N;;;;425
+517;WORD;READ;517;0;P;60;2;Commande man porte atelier;TSX;;;1.516;N;;;;426
+518;WORD;READ;518;0;P;60;2;Commande man porte atelier;TSX;;;1.517;N;;;;427
+519;WORD;READ;519;0;P;60;2;Commande man porte atelier;TSX;;;1.518;N;;;;428
+520;WORD;READ;520;0;P;60;2;Commande man porte atelier;TSX;;;1.519;N;;;;429
+521;WORD;READ;521;0;P;60;2;Commande man porte atelier;TSX;;;1.520;N;;;;430
+522;WORD;READ;522;0;P;60;2;Commande man porte atelier;TSX;;;1.521;N;;;;431
+523;WORD;READ;523;0;P;60;2;Commande man porte atelier;TSX;;;1.522;N;;;;432
+524;WORD;READ;524;0;P;60;2;Commande man porte atelier;TSX;;;1.523;N;;;;433
+525;WORD;READ;525;0;P;60;2;Commande man porte atelier;TSX;;;1.524;N;;;;434
